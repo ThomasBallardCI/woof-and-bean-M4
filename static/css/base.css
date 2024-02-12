@@ -127,10 +127,14 @@ body {
     z-index: 9999;
 }
 
-/* .navbar-toggler-icon,
 .navbar-toggler {
-    color: #FAB49A !important;
-} */
+    background-color: #FAB49A !important;
+    border-color: #3C3C3C !important;
+}
+
+.navbar-toggler-icon {
+
+}
 
 /* -------------------------------- Media Queries */
 
