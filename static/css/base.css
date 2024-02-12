@@ -7,7 +7,7 @@ body {
     background-size: cover;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Lato';
+    font-family: 'Poppins';
 }
 
 /* from Bulma */
@@ -34,8 +34,8 @@ body {
 }
 
 .btn-black {
-    background: black;
-    color: white;
+    background: #3C3C3C;
+    color: #FAB49A;
 }
 
 .shop-now-button:hover,
@@ -46,25 +46,25 @@ body {
 .btn-black:focus {
     background: #3C3C3C;
     color: #FAB49A;
+    box-shadow: 0 0 0 2px #FAB49A
 }
 
 .text-black {
-    color: #000;
+    color: #3C3C3C !important;
 }
 
 .border-black {
-    border: 1px solid black;
+    border: 1px solid #3C3C3C !important;
 }
 
-/* my custom styling */
-.header-text-custom,
+.text-peach,
 .text-logo {
     color: #FAB49A !important;
 }
 
-.header-text-custom:hover,
-.header-text-custom:active,
-.header-text-custom:focus {
+.text-peach:hover,
+.text-peach:active,
+.text-peach:focus {
     text-shadow: 1px 1px 10px #000;
     color: #FAB49A;
 }
@@ -87,39 +87,26 @@ body {
     background-color: #3C3C3C;
 }
 
-.bg-offer {
+.bg-peach {
     background-color: #FAB49A;
 }
 
 .offer-font {
-    color: #3C3C3C;
-    text-transform: uppercase;
+    color: #3C3C3C !important;
+    text-transform: uppercase !important;
 }
 
-.btn-custom {
+.btn-search {
     background-color: #FAB49A;
     color: #3C3C3C;
 }
 
-.btn-custom-search {
-    background-color: #FAB49A;
-    color: #3C3C3C;
-}
-
-.btn-custom:hover,
-.btn-custom:focus,
-.btn-custom:active {
+.btn-search:hover,
+.btn-search:focus,
+.btn-search:active {
     background: #3C3C3C;
     color: #FAB49A;
     box-shadow: 0 0 0 2px #FAB49A;
-}
-
-.btn-custom-search:hover,
-.btn-custom-search:focus,
-.btn-custom-search:active {
-    background: #3C3C3C;
-    color: #FAB49A;
-    border: 2px solid #FAB49A;
 }
 
 .search-bar {
