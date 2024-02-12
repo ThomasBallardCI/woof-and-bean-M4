@@ -1,0 +1,170 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url('/media/backgroundimage.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: calc(100vh - 164px);
+    color: #555;
+    font-family: 'Lato';
+}
+
+/* from Bulma */
+.icon {
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.logo-font {
+    text-transform: uppercase;
+}
+
+.main-logo-link {
+    width: fit-content;
+}
+
+.shop-now-button {
+    background: #FAB49A;
+    color: #3C3C3C;
+    min-width: 260px;
+}
+
+.btn-black {
+    background: black;
+    color: white;
+}
+
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
+.btn-black:hover,
+.btn-black:active,
+.btn-black:focus {
+    background: #3C3C3C;
+    color: #FAB49A;
+}
+
+.text-black {
+    color: #000;
+}
+
+.border-black {
+    border: 1px solid black;
+}
+
+/* my custom styling */
+.header-text-custom,
+.text-logo {
+    color: #FAB49A !important;
+}
+
+.header-text-custom:hover,
+.header-text-custom:active,
+.header-text-custom:focus {
+    text-shadow: 1px 1px 10px #000;
+    color: #FAB49A;
+}
+
+.text-custom {
+    color: #FAB49A;
+    text-shadow: 1px 1px 10px #000;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+}
+
+.text-logo {
+    margin-left: 10px;
+}
+
+.bg-custom {
+    background-color: #3C3C3C;
+}
+
+.bg-offer {
+    background-color: #FAB49A;
+}
+
+.offer-font {
+    color: #3C3C3C;
+    text-transform: uppercase;
+}
+
+.btn-custom {
+    background-color: #FAB49A;
+    color: #3C3C3C;
+}
+
+.btn-custom-search {
+    background-color: #FAB49A;
+    color: #3C3C3C;
+}
+
+.btn-custom:hover,
+.btn-custom:focus,
+.btn-custom:active {
+    background: #3C3C3C;
+    color: #FAB49A;
+    box-shadow: 0 0 0 2px #FAB49A;
+}
+
+.btn-custom-search:hover,
+.btn-custom-search:focus,
+.btn-custom-search:active {
+    background: #3C3C3C;
+    color: #FAB49A;
+    border: 2px solid #FAB49A;
+}
+
+.search-bar {
+    border: 2px solid #FAB49A;
+}
+
+.dropdown-menu {
+    background-color: #FAB49A;
+    color: #3C3C3C;
+}
+
+.mobile-search-dropdown {
+    background-color: #3C3C3C;
+    color: #3C3C3C;
+}
+.input-group-append {
+    right: 0;
+    z-index: 9999;
+}
+
+/* .navbar-toggler-icon,
+.navbar-toggler {
+    color: #FAB49A !important;
+} */
+
+/* -------------------------------- Media Queries */
+
+/* Slightly larger container on xl screens */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 80%;
+  }
+}
+
+/* fixed top navbar only on medium and up */
+@media (min-width: 992px) {
+    .fixed-top-desktop-only {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 1030;
+    }
+
+    .header-container {
+        padding-top: 164px;
+    }
+}
