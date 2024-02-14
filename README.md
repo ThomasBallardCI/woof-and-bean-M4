@@ -57,5 +57,17 @@ Search bar icon inside input on the right helped by Slack London community
     "name" - category name PrimaryKey
     "friendly_name" - friendly name for front end
 
+# wishlist Model
+    "User" - One to One field - User
+    "products" - Many to Many field - Product
+    "created" - date time field
+
+# rating Model
+    star choices 1,1 - 2,2 - 3,3 - 4,4 - 5,5
+    "User" - foreignkey
+    "product" - foreignkey
+    "order" - foreignkey
+    "rating" - charfield - 1-5 stars
+
 # Font/Typeface
     Poppins - Googlefonts
