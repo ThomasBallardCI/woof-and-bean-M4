@@ -58,13 +58,14 @@ body {
 }
 
 .text-peach,
+.text-peach-nav,
 .text-logo {
     color: #FAB49A !important;
 }
 
-.text-peach:hover,
-.text-peach:active,
-.text-peach:focus {
+.text-peach-nav:hover,
+.text-peach-nav:active,
+.text-peach-nav:focus {
     text-shadow: 1px 1px 10px #000;
     color: #FAB49A;
 }
