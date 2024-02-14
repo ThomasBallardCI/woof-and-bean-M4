@@ -41,17 +41,25 @@ Search bar icon inside input on the right helped by Slack London community
         | Have a personalized user profile | View my personal order history, order confirmations<br> and save my personal information |
 
 
-# Products Model
-    "pk" - Primary key
-    "model" = products.product
-    "fields"
-        "category" - Product category ForeignKey
-        "sku" - product sku
-        "name" - product name
-        "description" - product description
-        "price" - product price
-        "rating" - product rating
-        "image" - product image
+# Product Model
+    "category" - Product category ForeignKey
+    "sku" - product sku
+    "name" - product name
+    "description" - product description
+    "price" - product price
+    "rating" - product rating
+    "image url" - product image url
+    "image" - product image
+
+# Profiles Model
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    default_phone_number = models.CharField(max_length=20, null=True, blank=True)
+    default_street_address1 = models.CharField(max_length=80, null=True, blank=True)
+    default_street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    default_town_or_city = models.CharField(max_length=40, null=True, blank=True)
+    default_county = models.CharField(max_length=80, null=True, blank=True)
+    default_postcode = models.CharField(max_length=20, null=True, blank=True)
+    default_country = CountryField(blank_label='Country', null=True, blank=True)
 
 # Category Model
     "name" - category name PrimaryKey
@@ -68,6 +76,28 @@ Search bar icon inside input on the right helped by Slack London community
     "product" - foreignkey
     "order" - foreignkey
     "rating" - charfield - 1-5 stars
+
+# Order checkout Model
+     order_number = models.CharField(max_length=32, null=False, editable=False)
+    user_profile = models.ForeignKey(UserProfile, on_delete=models.SET_NULL,
+                                     null=True, blank=True, related_name='orders')
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
+    phone_number = models.CharField(max_length=20, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
+    postcode = models.CharField(max_length=20, null=True, blank=True)
+    town_or_city = models.CharField(max_length=40, null=False, blank=False)
+    street_address1 = models.CharField(max_length=80, null=False, blank=False)
+    street_address2 = models.CharField(max_length=80, null=True, blank=True)
+    county = models.CharField(max_length=80, null=True, blank=True)
+    date = models.DateTimeField(auto_now_add=True)
+    delivery_cost = models.DecimalField(max_digits=6, decimal_places=2, null=False, default=0)
+    order_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    grand_total = models.DecimalField(max_digits=10, decimal_places=2, null=False, default=0)
+    original_bag = models.TextField(null=False, blank=False, default='')
+    stripe_pid = models.CharField(max_length=254, null=False, blank=False, default='')
+
+
 
 # Font/Typeface
     Poppins - Googlefonts
