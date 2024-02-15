@@ -46,7 +46,7 @@ body {
 .btn-black:focus {
     background: #3C3C3C;
     color: #FAB49A;
-    box-shadow: 0 0 0 2px #FAB49A
+    box-shadow: 0 0 0 1px #FAB49A
 }
 
 .text-black {
@@ -55,6 +55,15 @@ body {
 
 .border-black {
     border: 1px solid #3C3C3C !important;
+}
+
+.border-peach {
+    border: 1px solid #FAB49A !important;
+}
+
+a.category-badge > span.badge:hover {
+    background: #FAB49A !important;
+    color: #3C3C3C !important;
 }
 
 .text-peach,
@@ -107,11 +116,11 @@ body {
 .btn-search:active {
     background: #3C3C3C;
     color: #FAB49A;
-    box-shadow: 0 0 0 2px #FAB49A;
+    box-shadow: 0 0 0 1px #FAB49A;
 }
 
 .search-bar {
-    border: 2px solid #FAB49A;
+    border: 1px solid #FAB49A;
 }
 
 .dropdown-menu {
@@ -146,7 +155,6 @@ body {
 hr {
     border-color: #FAB49A;
 }
-
 
 
 /* -------------------------------- Media Queries */
