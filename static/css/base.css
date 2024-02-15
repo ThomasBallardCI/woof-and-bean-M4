@@ -33,13 +33,30 @@ body {
     min-width: 260px;
 }
 
-.btn-black {
-    background: #3C3C3C;
-    color: #FAB49A;
+.btn-add-bag {
+    background: #FAB49A;
+    color: #3C3C3C;
+    border: 1px solid #FAB49A !important;
+}
+
+.btn-add-bag:hover,
+.btn-add-bag:active,
+.btn-add-bag:focus {
+    box-shadow: 1px 1px 10px #000;
 }
 
 .btn-outline-black {
+    background: #3C3C3C;
     color: #FAB49A !important;
+    border: 1px solid #FAB49A;
+}
+
+.btn-outline-black:hover,
+.btn-outline-black:active,
+.btn-outline-black:focus {
+    background: #FAB49A;
+    color: #3C3C3C !important;
+
 }
 
 .shop-now-button:hover,
@@ -80,7 +97,7 @@ a.category-badge > span.badge:hover {
 .text-peach-nav:active,
 .text-peach-nav:focus {
     text-shadow: 1px 1px 10px #000;
-    color: #FAB49A;
+    /* color: #FAB49A; */
 }
 
 .text-custom {
