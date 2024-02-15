@@ -38,6 +38,10 @@ body {
     color: #FAB49A;
 }
 
+.btn-outline-black {
+    color: #FAB49A !important;
+}
+
 .shop-now-button:hover,
 .shop-now-button:active,
 .shop-now-button:focus,
