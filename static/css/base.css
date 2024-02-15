@@ -33,16 +33,24 @@ body {
     min-width: 260px;
 }
 
-.btn-add-bag {
-    background: #FAB49A;
-    color: #3C3C3C;
-    border: 1px solid #FAB49A !important;
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus {
+    background: #3C3C3C;
+    color: #FAB49A;
+    box-shadow: 0 0 0 1px #FAB49A
 }
 
-.btn-add-bag:hover,
-.btn-add-bag:active,
-.btn-add-bag:focus {
-    box-shadow: 1px 1px 10px #000;
+.btn-peach {
+    background: #FAB49A;
+    color: #3C3C3C !important;
+    border: 1px solid #FAB49A;
+}
+
+.btn-peach:hover,
+.btn-peach:active,
+.btn-peach:focus {
+    box-shadow: 1px 1px 5px #000;
 }
 
 .btn-outline-black {
@@ -56,18 +64,23 @@ body {
 .btn-outline-black:focus {
     background: #FAB49A;
     color: #3C3C3C !important;
-
 }
 
-.shop-now-button:hover,
-.shop-now-button:active,
-.shop-now-button:focus,
-.btn-black:hover,
-.btn-black:active,
-.btn-black:focus {
+.btn-search {
+    background-color: #FAB49A;
+    color: #3C3C3C;
+}
+
+.btn-search:hover,
+.btn-search:focus,
+.btn-search:active {
     background: #3C3C3C;
     color: #FAB49A;
-    box-shadow: 0 0 0 1px #FAB49A
+    box-shadow: 0 0 0 1px #FAB49A;
+}
+
+.text-bag {
+    color: #000 !important;
 }
 
 .text-black {
@@ -97,7 +110,6 @@ a.category-badge > span.badge:hover {
 .text-peach-nav:active,
 .text-peach-nav:focus {
     text-shadow: 1px 1px 10px #000;
-    /* color: #FAB49A; */
 }
 
 .text-custom {
@@ -125,19 +137,6 @@ a.category-badge > span.badge:hover {
 .offer-font {
     color: #3C3C3C !important;
     text-transform: uppercase !important;
-}
-
-.btn-search {
-    background-color: #FAB49A;
-    color: #3C3C3C;
-}
-
-.btn-search:hover,
-.btn-search:focus,
-.btn-search:active {
-    background: #3C3C3C;
-    color: #FAB49A;
-    box-shadow: 0 0 0 1px #FAB49A;
 }
 
 .search-bar {
