@@ -1,5 +1,7 @@
 Search bar icon inside input on the right helped by Slack London community
 
+8 products per category
+
 ## User Stories
 
 ### As A/An Shopper
