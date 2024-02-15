@@ -16,10 +16,10 @@
             <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="#" id="clothing-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Canine
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="clothing-link">
-                <a href="" class="dropdown-item">Treats</a>
-                <a href="" class="dropdown-item">Toys</a>
-                <a href="" class="dropdown-item">All Canine</a>
+            <div class="dropdown-menu border-0" aria-labelledby="canine-items-link">
+                <a href="{% url 'products' %}?category=dog_treats" class="dropdown-item">Treats</a>
+                <a href="{% url 'products' %}?category=dog_toys" class="dropdown-item">Toys</a>
+                <a href="{% url 'products' %}?category=dog_toys,dog_treats" class="dropdown-item">All Canine</a>
             </div>
         </li>
 
@@ -27,10 +27,10 @@
             <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="#" id="homeware-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Coffee
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="homeware-link">
-                <a href="" class="dropdown-item">Beans &amp; Pre-Ground</a>
-                <a href="" class="dropdown-item">Accessoriess</a>
-                <a href="" class="dropdown-item">All Coffee</a>
+            <div class="dropdown-menu border-0" aria-labelledby="coffee-link">
+                <a href="{% url 'products' %}?category=coffee_beans,coffee_pre_ground" class="dropdown-item">Beans &amp; Pre-Ground</a>
+                <a href="{% url 'products' %}?category=coffee_accessories" class="dropdown-item">Accessoriess</a>
+                <a href="{% url 'products' %}?category=coffee_beans,coffee_pre_ground,coffee_accessories" class="dropdown-item">All Coffee</a>
             </div>
         </li>
 
@@ -39,10 +39,9 @@
                 Special Offers
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-                <a href="" class="dropdown-item">New Arrivals</a>
-                <a href="" class="dropdown-item">Deals</a>
-                <a href="" class="dropdown-item">Clearance</a>
-                <a href="" class="dropdown-item">All Specials</a>
+                <a href="{% url 'products' %}?category=new_arrivals" class="dropdown-item">New Arrivals</a>
+                <a href="{% url 'products' %}?category=deals" class="dropdown-item">Deals</a>
+                <a href="{% url 'products' %}?category=new_arrivals,deals" class="dropdown-item">All Specials</a>
             </div>
         </li>
     </ul>
