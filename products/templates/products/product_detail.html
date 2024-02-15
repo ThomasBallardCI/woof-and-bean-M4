@@ -31,8 +31,8 @@ All Products
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5 text-peach">
-                    <h2 class="mb-0"><strong>{{ product.name }}</strong></h2>
-                    <p class="lead mb-0 text-left">${{ product.price }}</p>
+                    <p class="mb-0"><h3>{{ product.name }}</h3></p>
+                    <p class="lead mb-0 text-left font-weight-bold">${{ product.price }}</p>
                     {% if product.rating %}
                         <small class="text-muted"><i class="fas fa-star mr-1 text-peach"></i>{{ product.rating }} / 5</small>
                     {% else %}

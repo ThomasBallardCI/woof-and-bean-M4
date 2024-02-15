@@ -172,3 +172,14 @@ hr {
         padding-top: 164px;
     }
 }
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 132px;
+    }
+
+    body {
+        height: calc(100vh - 132px);
+    }
+}
