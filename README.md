@@ -2,6 +2,16 @@ Search bar icon inside input on the right helped by Slack London community
 
 8 products per category
 
+singals instances create and save
+
+
+cloudinary under staticfiles from djnao in the settings.py
+
+
+set up ready signals in apps.py import signals to activate
+
+
+
 ## User Stories
 
 ### As A/An Shopper
