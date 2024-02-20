@@ -41,6 +41,18 @@ body {
     box-shadow: 0 0 0 1px #FAB49A
 }
 
+.btn-peach-quantity {
+    background: #FAB49A;
+    color: #3C3C3C !important;
+    border: 1px solid #FAB49A;
+}
+
+.btn-peach-quantity:hover,
+.btn-peach-quantity:active,
+.btn-peach-quantity:focus {
+    border: 1px solid white;
+}
+
 .btn-peach {
     background: #FAB49A;
     color: #3C3C3C !important;
