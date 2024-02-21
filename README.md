@@ -4,11 +4,11 @@ Search bar icon inside input on the right helped by Slack London community
 
 singals instances create and save
 
-cloudinary under staticfiles from djnao in the settings.py
-
 set up ready signals in apps.py import signals to activate
 
-Add items to checklist - using add item to bag views.py code as a base?
+Add items to wishlist - using add item to bag views.py code as a base?
+
+Add a contact model custom model 2
 
 
 
