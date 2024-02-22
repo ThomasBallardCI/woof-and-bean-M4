@@ -7,9 +7,6 @@ from django.conf import settings
 from products.models import Product
 
 
-# Create your models here.
-
-
 class Order(models.Model):
     order_number = models.CharField(max_length=32, null=False, editable=False)
     full_name = models.CharField(max_length=50, null=False, blank=False)
@@ -34,7 +31,7 @@ class Order(models.Model):
 
     def _generate_order_number(self):
         """
-        Private Method to generate a random, unique order number using UUID
+        Generate a random, unique order number using UUID
         """
         return uuid.uuid4().hex.upper()
 
@@ -77,7 +74,7 @@ class OrderLineItem(models.Model):
         related_name="lineitems",
     )
     product = models.ForeignKey(
-        Order, null=False, blank=False, on_delete=models.CASCADE
+        Product, null=False, blank=False, on_delete=models.CASCADE
     )
     quantity = models.IntegerField(null=False, blank=False, default=0)
     lineitem_total = models.DecimalField(
