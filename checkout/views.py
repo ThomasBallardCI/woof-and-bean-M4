@@ -14,7 +14,7 @@ def checkout(request):
 
     bag = request.session.get('bag', {})
     if not bag:
-        messages.error(request, "There's nothing in your shopping bag at this time")
+        messages.error(request, "There's nothing in your bag at the moment")
         return redirect(reverse('products'))
 
     current_bag = bag_contents(request)
@@ -36,7 +36,7 @@ def checkout(request):
     context = {
         'order_form': order_form,
         'stripe_public_key': stripe_public_key,
-        'client_secret': intent.client_secret ,
+        'client_secret': intent.client_secret,
     }
 
     return render(request, template, context)
