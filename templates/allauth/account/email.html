@@ -1,13 +1,17 @@
 {% extends "account/base.html" %}
 
+{% block extra_title %}
+Account
+{% endblock %}
+
 {% load i18n %}
 
 {% block head_title %}{% trans "Account" %}{% endblock %}
 
 {% block inner_content %}
-    <hr>
-    <h2 class="logo-font mb-4">{% trans "E-mail Addresses" %}</h2>
-    <hr>
+    <hr class="hr-peach">
+    <h2 class="logo-font mb-4 text-peach">{% trans "E-mail Addresses" %}</h2>
+    <hr class="hr-peach">
 {% if user.emailaddress_set.all %}
 <p>{% trans 'The following e-mail addresses are associated with your account:' %}</p>
 
