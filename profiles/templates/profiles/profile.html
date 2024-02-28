@@ -27,5 +27,18 @@ Profile
                 <hr class="hr-peach">
             </div>
         </div>
-        {{ profile }}
+        <div class="row">
+            <div class="col-12 col-lg-6">
+                <p class="text-white">Default Delivery Information</p>
+                <form action="{% url 'profile' %}" class="mt-3">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <button class="btn btn-peach rounded-pill text-uppercase float-right">Update Information</button>
+                </form>
+            </div>
+            <div class="col-12 col-lg-6">
+                <p class="text-white">Order History</p>
+                {{ orders }}
+            </div>
+        </div>
 {% endblock %}
