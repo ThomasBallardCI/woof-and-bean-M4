@@ -30,7 +30,7 @@ Profile
         <div class="row">
             <div class="col-12 col-lg-6">
                 <p class="text-white">Default Delivery Information</p>
-                <form action="{% url 'profile' %}" class="mt-3">
+                <form action="{% url 'profile' %}" method="POST" class="mt-3" id="profile-update-form">
                     {% csrf_token %}
                     {{ form|crispy }}
                     <button class="btn btn-peach rounded-pill text-uppercase float-right">Update Information</button>
