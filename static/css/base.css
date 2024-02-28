@@ -299,7 +299,11 @@ a.category-badge > span.badge:hover {
 }
 
 .allauth-form-inner-content input::placeholder {
-    color: #3C3C3C;
+    color: #aab7c4 !important;
+}
+
+.form-control::placeholder {
+    color: #aab7c4 !important;
 }
 
 .allauth-form-inner-content button,
