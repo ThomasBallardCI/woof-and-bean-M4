@@ -32,7 +32,7 @@ All Products
             <div class="col-12 col-md-6 col-lg-4">
                 <div class="product-details-container mb-5 mt-md-5 text-peach">
                     <p class="mb-0"><h3>{{ product.name }}</h3></p>
-                    <p class="lead mb-0 text-left font-weight-bold text-white">${{ product.price }}</p>
+                    <p class="lead mb-0 text-left font-weight-bold text-peach">${{ product.price }}</p>
                     {% if product.category %}
                     <p class="small mt-1 mb-0">
                         <a class="text-muted" href="{% url 'products' %}?category={{ product.category.name }}">
@@ -40,12 +40,12 @@ All Products
                         </a>
                     </p>
                     {% endif %}
-                    <p class="mt-3">{{ product.description|safe }}</p>
+                    <p class="mt-3 text-white">{{ product.description|safe }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}
                         <div class="form-row">
                             <div class="col-12">
-                                <p class="mt-3 text-white"><strong>Quantity:</strong></p>
+                                <p class="mt-3 text-peach"><strong>Quantity:</strong></p>
                                 <div class="form-group w-50">
                                     <div class="input-group">
                                         <div class="input-group-prepend">
