@@ -44,7 +44,7 @@ Profile
 
                             {% for item in wishlist_items %}
                                 <tr class="text-white">
-                                    <td class="p-3 w-25">
+                                    <td class="p-3">
                                         {% if item.product.image %}
                                         <a href="{% url 'product_detail' item.product.id %}">
                                             <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-thumbnail img-fluid rounded">
@@ -55,7 +55,11 @@ Profile
                                         </a>
                                         {% endif %}
                                     </td>
-                                    <td class="py-3 my-0">{{ item.product.name }}</td>
+                                    <td class="py-3 my-0">
+                                        <a class="text-white" href="{% url 'product_detail' item.product.id %}">
+                                            {{ item.product.name }}
+                                        </a>
+                                    </td>
                                     <td class="py-3 my-0">${{ item.product.price }}</td>
                                     <td class="py-3 my-0">{{ item.added_at|date:"d F, Y" }}</td>
                                     <td class="py-3 my-0">
