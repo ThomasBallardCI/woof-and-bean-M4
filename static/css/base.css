@@ -368,6 +368,18 @@ a.category-badge > span.badge:hover {
     border-radius: 0;
 }
 
+.already-in-wishlist {
+    pointer-events: none; /* Disable pointer events */
+    /* Additional styling if needed */
+}
+
+.img-thumbnail {
+    max-width: 100px;
+    padding: 0;
+    background: #3C3C3C;
+    border: none !important;
+}
+
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */

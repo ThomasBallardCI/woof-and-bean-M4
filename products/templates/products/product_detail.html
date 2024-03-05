@@ -46,6 +46,19 @@ All Products
                             <a class="text-danger" href="{% url 'delete_product' product.id %}">Delete</a>
                         </small>
                     {% endif %}
+                    <div class="wishlist">
+                        {% if user.is_authenticated %}
+                            {% if in_wishlist %}
+                                <a href="#" class="wishlist-action already-in-wishlist text-peach" disabled>
+                                    <i class="fas fa-heart"></i> Already in wishlist
+                                </a>
+                            {% else %}
+                                <a href="{% url 'add_to_wishlist' product.id %}" class="wishlist-action add-to-wishlist text-peach">
+                                    <i class="far fa-heart"></i> Add to wishlist
+                                </a>
+                            {% endif %}
+                        {% endif %}
+                    </div>  
                     <p class="mt-3 text-white">{{ product.description|safe }}</p>
                     <form class="form" action="{% url 'add_to_bag' product.id %}" method="POST">
                         {% csrf_token %}

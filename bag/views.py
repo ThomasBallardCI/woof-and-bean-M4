@@ -14,8 +14,15 @@ def add_to_bag(request, item_id):
     """ Add a quantity of the specified product to the shopping bag """
 
     product = get_object_or_404(Product, pk=item_id)
+
+    # Determine the redirect URL based on whether it's from the wishlist or not
+    redirect_url = request.POST.get('redirect_url') if request.POST.get('redirect_url') else reverse('product_detail', args=[item_id])
+
+    # Check if the request came from the wishlist page
+    if 'from_wishlist' in request.POST:
+        redirect_url = reverse('wishlist')
+
     quantity = int(request.POST.get('quantity'))
-    redirect_url = request.POST.get('redirect_url')
     bag = request.session.get('bag', {})
 
     if item_id in list(bag.keys()):

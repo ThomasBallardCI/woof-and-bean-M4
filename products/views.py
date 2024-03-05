@@ -5,7 +5,7 @@ from django.db.models import Q
 from django.db.models.functions import Lower
 
 from .models import Product, Category
-from .forms import ProductForm
+from profiles.models import WishlistItem
 
 # Create your views here.
 
@@ -65,9 +65,11 @@ def product_detail(request, product_id):
     """ A view to show individual product details """
 
     product = get_object_or_404(Product, pk=product_id)
+    in_wishlist = WishlistItem.objects.filter(user=request.user, product=product).exists() if request.user.is_authenticated else False
 
     context = {
         'product': product,
+        'in_wishlist': in_wishlist,
     }
 
     return render(request, 'products/product_detail.html', context)
