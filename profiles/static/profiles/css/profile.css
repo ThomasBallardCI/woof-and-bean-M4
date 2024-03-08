@@ -1,5 +1,5 @@
 .order-history {
-    max-height: 416px; /* height of profile form + submit button */
+    max-height: 416px;
     overflow-y: auto;
 }
 
@@ -18,4 +18,34 @@
 
 #id_default_country option:first-child {
     color: #aab7c4;
+}
+
+/* style for mobile */
+@media (max-width: 1020px) {
+    .btn-add-to-bag {
+        height: 40px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 576px) {
+    .btn-add-to-bag {
+        min-height: 40px; 
+        height: auto; 
+        line-height: 1; 
+        padding-top: 5px; 
+        padding-bottom: 5px;
+        width: 100%;
+    }
+
+    .wishlist-table img {
+        max-width: 100px;
+        height: auto;
+    }
+
+    .wishlist-table td, .wishlist-table th {
+        max-width: 100%;
+        width: 100%;
+        word-wrap: break-word;
+    }
 }

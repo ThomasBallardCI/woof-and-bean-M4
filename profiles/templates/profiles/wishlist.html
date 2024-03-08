@@ -32,13 +32,13 @@ Profile
                 {% if wishlist_items %}
                     <div class="table-responsive rounded">
                         <table class="table table-sm table-borderless">
-                            <thead class="mt-3">
+                            <thead>
                                 <tr class="text-peach">
                                     <th scope="col">Image</th>
                                     <th scope="col">Name</th>
                                     <th scope="col">Price</th>
                                     <th scope="col">Date Added</th>
-                                    <th scope="col">Action</th>
+                                    <th scope="col" class="text-center">Action</th>
                                 </tr>
                             </thead>
 
@@ -47,7 +47,7 @@ Profile
                                     <td class="p-3">
                                         {% if item.product.image %}
                                         <a href="{% url 'product_detail' item.product.id %}">
-                                            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-thumbnail img-fluid rounded">
+                                            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-thumbnail img-fluid rounded" style="max-width: 100px; width: 100%; height: auto;">
                                         </a>
                                         {% else %}
                                         <a href="{% url 'product_detail' item.product.id %}">
@@ -62,13 +62,13 @@ Profile
                                     </td>
                                     <td class="py-3 my-0">${{ item.product.price }}</td>
                                     <td class="py-3 my-0">{{ item.added_at|date:"d F, Y" }}</td>
-                                    <td class="py-3 my-0">
+                                    <td class="py-3 my-0 text-center">
                                         <form action="{% url 'add_to_bag' item.product.id %}" method="post">
                                             {% csrf_token %}
                                             <input type="hidden" name="quantity" value="1">
                                             <input type="hidden" name="redirect_url" value="{% url 'wishlist' %}">
                                             <input type="hidden" name="from_wishlist" value="True"> <!-- This indicates that it's from the wishlist -->
-                                            <button type="submit" class="btn btn-outline-black rounded-pill">Add to Bag</button>
+                                            <button type="submit" class="btn btn-outline-black rounded-pill btn-add-to-bag">Add <i class="fas fa-shopping-bag fa-lg"></i></button>
                                         </form>
                                         <a href="{% url 'remove_from_wishlist' item.product.id %}" class="text-danger">Remove</a>
                                     </td>
@@ -77,7 +77,7 @@ Profile
                         </table>
                     </div>
                 {% else %}
-                    <div class="text-white text-center"><h2><p>Your Wishlist Is Empty<br>To Add Products Visit A Product Page And<br>Click "Add to Wishlist"</p</h2></div>
+                    <div class="text-white text-center"><h2><p>Your Wishlist Is Empty<br>To Add Products Visit A Product Page And<br>Click "Add to Wishlist"</p></h2></div>
                 {% endif %}
             </div>
         </div>  

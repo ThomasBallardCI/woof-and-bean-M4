@@ -370,7 +370,6 @@ a.category-badge > span.badge:hover {
 
 .already-in-wishlist {
     pointer-events: none; /* Disable pointer events */
-    /* Additional styling if needed */
 }
 
 .img-thumbnail {
@@ -378,6 +377,20 @@ a.category-badge > span.badge:hover {
     padding: 0;
     background: #3C3C3C;
     border: none !important;
+}
+
+.message-label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#message-field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    resize: none;
 }
 
 /* -------------------------------- Media Queries */
@@ -412,5 +425,22 @@ a.category-badge > span.badge:hover {
 
     body {
         height: calc(100vh - 132px);
+    }
+}
+
+/* -------------------------------- Media Queries for Contact Form */
+
+/* Center the contact form on desktop screens */
+@media (min-width: 992px) {
+    .contact-form-container {
+        margin: 0 auto; /* Center the container horizontally */
+    }
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 767px) {
+    .contact-form-container {
+        padding-left: 15px;
+        padding-right: 15px;
     }
 }
