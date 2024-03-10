@@ -220,4 +220,3 @@ DEFAULT_FROM_EMAIL = 'woofandbean@example.com'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# ACCOUNT_EMAIL_VERIFICATION = 'none'
