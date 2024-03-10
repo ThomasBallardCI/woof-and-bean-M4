@@ -1,0 +1,1 @@
+web: gunicorn woof_and_bean.wsgi:application
