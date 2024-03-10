@@ -13,7 +13,7 @@ def contact_us(request):
     sends this form to site manager
     """
     if request.method == 'POST':
-        """ Send user an email to acknowledge their message """
+        """ Sends user an email to acknowledge their message """
         form = ContactForm(request.POST)
         if form.is_valid():
             name = request.POST.get('name')
