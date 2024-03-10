@@ -1,11 +1,17 @@
 from django.db import models
+from django.utils import timezone
 
-# Create your models here.
+
 class Contact(models.Model):
+    """ Model to set up Contact form """
     name = models.CharField(max_length=100)
-    email = models.EmailField()
-    message = models.TextField()
-    created_at = models.DateTimeField(auto_now_add=True)
+    email = models.EmailField(max_length=150)
+    subject = models.CharField(max_length=100)
+    content = models.CharField(max_length=2000)
+    date_submitted = models.DateTimeField(default=timezone.now,
+                                          editable=False)
 
-    def __str__(self):
-        return self.name
+    class Meta:
+        verbose_name = 'Contact Form'
+        verbose_name_plural = 'Contact Forms'
+        ordering = ['-date_submitted']

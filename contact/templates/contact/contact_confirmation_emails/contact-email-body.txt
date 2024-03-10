@@ -1,0 +1,12 @@
+Hello {{ contact.name }}.
+
+This is a confirmation of the message you sent to us at Woof and Bean, your message was as follows:
+
+Subject: {{ contact.subject }}
+Content: {{ contact.content }}
+
+We'd like to thank you for your message and we will respond within 48 hours. If your 
+message is urgent please phone us at 0123456789,
+
+Thank you again,
+Woof and Bean.
