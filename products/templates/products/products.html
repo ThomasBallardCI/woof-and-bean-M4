@@ -31,7 +31,7 @@ All Products
                 <div class="row mt-1 mb-2">
                     <div class="col-12 col-md-6 my-auto order-md-last d-flex justify-content-center justify-content-md-end">
                         <div class="sort-select-wrapper w-50">
-                            <select id="sort-selector" class="custom-select custom-select-sm rounded-pill border border-{% if current_sorting != 'None_None' %}peach{% else %}black{% endif %}">
+                            <select id="sort-selector" class="custom-select custom-select-sm rounded-pill border border-{% if current_sorting != 'None_None' %}peach{% else %}black{% endif %}" aria-label="sort products selector">
                                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by...</option>
                                 <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)</option>
                                 <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)</option>
