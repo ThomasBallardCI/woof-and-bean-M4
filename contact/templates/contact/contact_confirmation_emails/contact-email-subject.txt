@@ -1,1 +1,1 @@
-Second Hand Shelf Confirmation for message sent on {{ contact.date_submitted }}
+Woof and Bean Confirmation for message sent on {{ contact.date_submitted }}
