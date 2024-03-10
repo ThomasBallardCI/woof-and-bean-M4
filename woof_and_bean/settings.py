@@ -30,7 +30,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://woof-and-bean-ci-m4-3f6e86d7432d.herokuapp.com/', 'localhost']
+ALLOWED_HOSTS = ['woof-and-bean-ci-m4-3f6e86d7432d.herokuapp.com', 'localhost']
 
 
 # Application definition
@@ -194,3 +194,5 @@ DEFAULT_FROM_EMAIL = 'woofandbean@example.com'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+ACCOUNT_EMAIL_VERIFICATION = 'none'
