@@ -29,8 +29,9 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
+# DEBUG = True
 
-ALLOWED_HOSTS = ['woof-and-bean-ci-m4-3f6e86d7432d.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['woof-and-bean-ci-m4-3f6e86d7432d.herokuapp.com', '8000-thomasballa-woofandbean-a8jgbkmhvvs.ws-eu108.gitpod.io']
 
 
 # Application definition
@@ -176,6 +177,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
+# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
