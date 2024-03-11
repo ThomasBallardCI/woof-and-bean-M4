@@ -22,12 +22,11 @@ Profile
     <div class="container">
         <div class="row">
             <div class="col text-center mt-3">
-                <hr class="hr-peach w-50">
                 <h2 class="logo-font text-peach">wishlist</h2>
-                <hr class="hr-peach w-50">
+                <hr class="hr-peach">
             </div>
         </div>
-        <div class="row mt-3">
+        <div class="row">
             <div class="col">
                 {% if wishlist_items %}
                     <div class="table-responsive rounded">
@@ -67,7 +66,7 @@ Profile
                                             {% csrf_token %}
                                             <input type="hidden" name="quantity" value="1">
                                             <input type="hidden" name="redirect_url" value="{% url 'wishlist' %}">
-                                            <input type="hidden" name="from_wishlist" value="True"> <!-- This indicates that it's from the wishlist -->
+                                            <input type="hidden" name="from_wishlist" value="True">
                                             <button type="submit" class="btn btn-outline-black rounded-pill btn-add-to-bag">Add <i class="fas fa-shopping-bag fa-lg"></i></button>
                                         </form>
                                         <a href="{% url 'remove_from_wishlist' item.product.id %}" class="text-danger">Remove</a>
