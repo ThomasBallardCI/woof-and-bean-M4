@@ -1,3 +1,5 @@
+big - Server error 500 when signing up for account - fix = create runtime.txt with older version of python for heroku to use
+
 bug - stripe webhooks failing. - Fix added missin / to the end of the webhook name
 
 Bug - logo image not loading after heroku deployment - fix: Adjusted image src link for AWS hosting
