@@ -1,3 +1,5 @@
+bug - stripe webhooks failing. - Fix added missin / to the end of the webhook name
+
 Bug - logo image not loading after heroku deployment - fix: Adjusted image src link for AWS hosting
 src="https://woof-and-bean-ci-m4.s3.amazonaws.com/media/wblogo.png"
 
