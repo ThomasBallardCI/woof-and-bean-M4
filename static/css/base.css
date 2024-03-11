@@ -175,8 +175,12 @@ a.category-badge > span.badge:hover {
 }
 
 .navbar-toggler {
-    background-color: #FAB49A !important;
-    border-color: #3C3C3C !important;
+    color: #FAB49A !important;
+    border: 0;
+}
+
+.fa-bars {
+    font-size: 2rem;
 }
 
 .overlay {
