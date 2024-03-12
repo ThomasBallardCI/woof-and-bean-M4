@@ -6,7 +6,8 @@
             </a>
         </li>
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="#" id="all-products-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="#" id="all-products-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 All Products
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
@@ -17,10 +18,11 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="#" id="canine-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="#" id="canine-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Canine
             </a>
-            <div class="dropdown-menu border-0" aria-labelledby="canine-items-link">
+            <div class="dropdown-menu border-0" aria-labelledby="canine-link">
                 <a href="{% url 'products' %}?category=dog_treats" class="dropdown-item">Dog Treats</a>
                 <a href="{% url 'products' %}?category=dog_toys" class="dropdown-item">Dog Toys</a>
                 <a href="{% url 'products' %}?category=dog_toys,dog_treats" class="dropdown-item">All Canine</a>
@@ -28,18 +30,22 @@
         </li>
 
         <li class="nav-item dropdown">
-            <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="#" id="coffee-link" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="#" id="coffee-link"
+                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Coffee
             </a>
             <div class="dropdown-menu border-0" aria-labelledby="coffee-link">
-                <a href="{% url 'products' %}?category=coffee_beans,coffee_pre_ground" class="dropdown-item">Coffee Beans &amp; Pre-Ground</a>
+                <a href="{% url 'products' %}?category=coffee_beans,coffee_pre_ground" class="dropdown-item">Coffee
+                    Beans &amp; Pre-Ground</a>
                 <a href="{% url 'products' %}?category=coffee_accessories" class="dropdown-item">Coffee Accessoriess</a>
-                <a href="{% url 'products' %}?category=coffee_beans,coffee_pre_ground,coffee_accessories" class="dropdown-item">All Coffee</a>
+                <a href="{% url 'products' %}?category=coffee_beans,coffee_pre_ground,coffee_accessories"
+                    class="dropdown-item">All Coffee</a>
             </div>
         </li>
 
         <li class="nav-item">
-            <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="{% url 'contact_us' %}" aria-label="Contact Us Link">
+            <a class="logo-font font-weight-bold nav-link text-peach-nav mr-5" href="{% url 'contact_us' %}"
+                aria-label="Contact Us Link">
                 Contact Us
             </a>
         </li>

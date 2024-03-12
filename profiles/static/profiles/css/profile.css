@@ -31,7 +31,8 @@
         height: auto;
     }
 
-    .wishlist-table td, .wishlist-table th {
+    .wishlist-table td,
+    .wishlist-table th {
         max-width: 100%;
         width: 100%;
         word-wrap: break-word;

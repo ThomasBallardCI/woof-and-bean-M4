@@ -46,8 +46,10 @@ body {
 }
 
 .btn-disabled {
-    opacity: 0.5; /* Reduce opacity for disabled buttons */
-    pointer-events: none; /* Disable pointer events for disabled buttons */
+    opacity: 0.5;
+    /* Reduce opacity for disabled buttons */
+    pointer-events: none;
+    /* Disable pointer events for disabled buttons */
 }
 
 .btn-peach-quantity {
@@ -116,7 +118,7 @@ body {
     border: 1px solid #FAB49A !important;
 }
 
-a.category-badge > span.badge:hover {
+a.category-badge>span.badge:hover {
     background: #FAB49A !important;
     color: #3C3C3C !important;
 }
@@ -234,10 +236,10 @@ a.category-badge > span.badge:hover {
 
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
-    width: 0; 
-    height: 0; 
+    width: 0;
+    height: 0;
     border-left: 4px solid transparent;
-    border-right: 4px solid transparent; 
+    border-right: 4px solid transparent;
     border-bottom: 10px solid black;
     position: absolute;
     top: -10px;
@@ -286,12 +288,15 @@ a.category-badge > span.badge:hover {
 /* Allauth form formatting */
 
 .allauth-form-inner-content p {
-    margin-top: 1.5rem; /* mt-4 */
-    color: white; /* text-secondary */
+    margin-top: 1.5rem;
+    /* mt-4 */
+    color: white;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content a {
-    color: #FAB49A; /* text-secondary */
+    color: #FAB49A;
+    /* text-secondary */
 }
 
 .allauth-form-inner-content input {
@@ -317,8 +322,8 @@ a.category-badge > span.badge:hover {
 
 .allauth-form-inner-content button,
 .allauth-form-inner-content input[type='submit'] {
-	/* btn */
-	display: inline-block;
+    /* btn */
+    display: inline-block;
     font-weight: 400;
     color: #3C3C3C;
     text-align: center;
@@ -335,18 +340,19 @@ a.category-badge > span.badge:hover {
     border-radius: 50rem;
 
     /* standard bootstrap btn transitions */
-    transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
 }
 
 .allauth-form-inner-content button:hover,
-.allauth-form-inner-content input[type='submit']:hover {	
-	color: #FAB49A;
+.allauth-form-inner-content input[type='submit']:hover {
+    color: #FAB49A;
     background-color: #3C3C3C;
     border-color: #FAB49A;
 }
 
 .allauth-form-inner-content a {
-	color: #FAB49A; /* text-info */
+    color: #FAB49A;
+    /* text-info */
 }
 
 /* Product Form */
@@ -378,7 +384,8 @@ a.category-badge > span.badge:hover {
 }
 
 .already-in-wishlist {
-    pointer-events: none; /* Disable pointer events */
+    pointer-events: none;
+    /* Disable pointer events */
 }
 
 .img-thumbnail {
@@ -406,9 +413,9 @@ a.category-badge > span.badge:hover {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-  .container {
-    max-width: 80%;
-  }
+    .container {
+        max-width: 80%;
+    }
 }
 
 /* fixed top navbar only on medium and up */
@@ -469,7 +476,8 @@ a.category-badge > span.badge:hover {
         font-size: .75rem;
     }
 
-    .increment-qty, .decrement-qty {
+    .increment-qty,
+    .decrement-qty {
         padding: .25rem .5rem !important;
     }
 
@@ -486,7 +494,8 @@ a.category-badge > span.badge:hover {
 /* Center the contact form on desktop screens */
 @media (min-width: 992px) {
     .contact-form-container {
-        margin: 0 auto; /* Center the container horizontally */
+        margin: 0 auto;
+        /* Center the container horizontally */
     }
 }
 

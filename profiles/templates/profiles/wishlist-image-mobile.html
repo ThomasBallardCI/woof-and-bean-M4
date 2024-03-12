@@ -1,9 +1,11 @@
 {% if item.product.image %}
-    <a href="{% url 'product_detail' item.product.id %}">
-        <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-fluid rounded" style="width: 100%; height: auto;">
-    </a>
+<a href="{% url 'product_detail' item.product.id %}">
+    <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-fluid rounded"
+        style="width: 100%; height: auto;">
+</a>
 {% else %}
-    <a href="{% url 'product_detail' item.product.id %}">
-        <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" class="img-fluid rounded" style="width: 100%; height: auto;">
-    </a>
+<a href="{% url 'product_detail' item.product.id %}">
+    <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" class="img-fluid rounded"
+        style="width: 100%; height: auto;">
+</a>
 {% endif %}

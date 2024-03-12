@@ -3,6 +3,7 @@
     <input type="hidden" name="quantity" value="1">
     <input type="hidden" name="redirect_url" value="{% url 'wishlist' %}">
     <input type="hidden" name="from_wishlist" value="True">
-    <button type="submit" class="btn btn-outline-black rounded-pill btn-add-to-bag">Add <i class="fas fa-shopping-bag fa-lg"></i></button>
+    <button type="submit" class="btn btn-outline-black rounded-pill btn-add-to-bag">Add <i
+            class="fas fa-shopping-bag fa-lg"></i></button>
 </form>
 <a href="{% url 'remove_from_wishlist' item.product.id %}" class="text-danger">Remove</a>
