@@ -45,6 +45,11 @@ body {
     background: #3C3C3C !important;
 }
 
+.btn-disabled {
+    opacity: 0.5; /* Reduce opacity for disabled buttons */
+    pointer-events: none; /* Disable pointer events for disabled buttons */
+}
+
 .btn-peach-quantity {
     background: #FAB49A;
     color: #3C3C3C !important;

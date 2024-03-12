@@ -1,4 +1,7 @@
-big - Server error 500 when signing up for account - fix = create runtime.txt with older version of python for heroku to use
+bug - after refactoring shopping basket code for mobile devices increment and decrement buttons would allow users to decrement and increment bellow 1 and above 99
+    Fix = Change Id's to classes for quantity form and adjusted JS to look for class elements.
+
+bug - Server error 500 when signing up for account - fix = create runtime.txt with older version of python for heroku to use
 
 bug - stripe webhooks failing. - Fix added missin / to the end of the webhook name
 
