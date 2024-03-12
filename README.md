@@ -1,3 +1,6 @@
+bug - NoReverseMatch at /profile/whislist/ when trying to include html for mobile wishlist view
+        fix = putting mobile includes inside forloop for wishlist items
+
 bug - after refactoring shopping basket code for mobile devices increment and decrement buttons would allow users to decrement and increment bellow 1 and above 99
     Fix = Change Id's to classes for quantity form and adjusted JS to look for class elements.
 

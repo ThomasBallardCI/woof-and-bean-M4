@@ -29,7 +29,25 @@ Profile
         <div class="row">
             <div class="col">
                 {% if wishlist_items %}
-                    <div class="table-responsive rounded">
+                    <div class="d-block d-md-none">
+                        {% for item in wishlist_items %}
+                            <div class="row">
+                                <div class="col-12 col-sm-6 mb-2">
+                                    {% include "profiles/wishlist-image-mobile.html" %}
+                                </div> 
+                                <div class="col-12 col-sm-6">
+                                    <p class="my-0 text-peach">Name:</p>{% include "profiles/wishlist-name.html" %}
+                                    <p class="my-0 text-peach">Price:</p><span class="text-white">${{ item.product.price }}</span>
+                                    <p class="my-0 text-peach">Added:</p><span class="text-white">{{ item.added_at|date:"d F, Y" }}</span>
+                                    {% include "profiles/wishlist-action.html" %}
+                                </div> 
+                                <div class="col-12 mb-2">
+                                    <hr class="hr-peach">
+                                </div> 
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="table-responsive rounded d-none d-md-block">
                         <table class="table table-sm table-borderless">
                             <thead>
                                 <tr class="text-peach">
@@ -44,32 +62,15 @@ Profile
                             {% for item in wishlist_items %}
                                 <tr class="text-white">
                                     <td class="p-3">
-                                        {% if item.product.image %}
-                                        <a href="{% url 'product_detail' item.product.id %}">
-                                            <img src="{{ item.product.image.url }}" alt="{{ item.product.name }}" class="img-thumbnail img-fluid rounded" style="max-width: 96px; width: 100%; height: auto;">
-                                        </a>
-                                        {% else %}
-                                        <a href="{% url 'product_detail' item.product.id %}">
-                                            <img src="{{ MEDIA_URL }}noimage.png" alt="{{ item.product.name }}" class="img-thumbnail img-fluid rounded">
-                                        </a>
-                                        {% endif %}
+                                        {% include "profiles/wishlist-image.html" %}
                                     </td>
                                     <td class="py-3 my-0">
-                                        <a class="text-white" href="{% url 'product_detail' item.product.id %}">
-                                            {{ item.product.name }}
-                                        </a>
+                                        {% include "profiles/wishlist-name.html" %}
                                     </td>
-                                    <td class="py-3 my-0">${{ item.product.price }}</td>
-                                    <td class="py-3 my-0">{{ item.added_at|date:"d F, Y" }}</td>
+                                    <td class="py-3"><p class="my-0">${{ item.product.price }}</p></td>
+                                    <td class="py-3"><p class="my-0">{{ item.added_at|date:"d F, Y" }}</p></td>
                                     <td class="py-3 my-0 text-center">
-                                        <form action="{% url 'add_to_bag' item.product.id %}" method="post">
-                                            {% csrf_token %}
-                                            <input type="hidden" name="quantity" value="1">
-                                            <input type="hidden" name="redirect_url" value="{% url 'wishlist' %}">
-                                            <input type="hidden" name="from_wishlist" value="True">
-                                            <button type="submit" class="btn btn-outline-black rounded-pill btn-add-to-bag">Add <i class="fas fa-shopping-bag fa-lg"></i></button>
-                                        </form>
-                                        <a href="{% url 'remove_from_wishlist' item.product.id %}" class="text-danger">Remove</a>
+                                        {% include "profiles/wishlist-action.html" %}
                                     </td>
                                 </tr>
                             {% endfor %}
