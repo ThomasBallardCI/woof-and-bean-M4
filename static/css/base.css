@@ -5,8 +5,9 @@ html {
 body {
     background: url('/media/backgroundimage.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-color: #3C3C3C;
     height: calc(100vh - 164px);
-    color: #3C3C3C;
+    color: #555;
     font-family: 'Poppins';
 }
 
