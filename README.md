@@ -2,7 +2,7 @@
 
 ## Woof and Bean
 
-Woof and Bean is a coffee and dog lovers' e-commerce website. Users can purchase various coffee-related paraphernalia and the perfect toy or treat for their special canine friend all in one place. By browsing via specific categories and using sorting filters such as name, date added, and category, as well as searching for keywords, the user has the ability to quickly find exactly what they are looking for. The basic functionality of the site comprises of the user being able to register for a private account, log in and out, and create orders by paying via Stripe and receiving confirmation emails when the order is created. Additional functionality has been added to the user experience, and these details will be discussed further in this document.
+Woof and Bean is a coffee and dog lovers' e-commerce website. Users can purchase various coffee-related paraphernalia and the perfect toy or treat for their special canine friend all in one place. By browsing via specific categories and using sorting filters such as name, date added, and category, as well as searching for keywords, the user can quickly find exactly what they are looking for. The basic functionality of the site comprises the user being able to register for a private account, log in and out, create orders by paying via Stripe, and receive confirmation emails when the order is created. Additional functionality has been added to the user experience, and these details will be discussed further in this document.
 
 !["Am I Responsive" image](docs/images/amiresponsive.jpg)
 
@@ -12,8 +12,8 @@ Woof and Bean is a coffee and dog lovers' e-commerce website. Users can purchase
 The goal of Woof and Bean is to provide a functional e-commerce experience to simulate the ability for users to browse products, add them to the cart, check out, receive order confirmation emails, and have a record of past orders within their account.
 
 * When developing Woof and Bean, the main goal was to improve upon the basic functionality as outlined above in this document and enhance the user experience further. The additional functionality is as follows:
-    * Users have the ability to easily create and edit a private wishlist while still being able to add the products directly to their shopping cart from the wishlist itself.
-    * A contact form for the user to be able to contact the site admins with queries, issues, or suggestions, then receive an email confirmation that their message was successfully sent.
+Users can easily create and edit a private wishlist while still being able to add the products directly to their shopping cart from the wishlist itself.
+    * A contact form for the user to be able to contact the site admins with queries, issues, or suggestions, and then receive an email confirmation that their message was successfully sent.
 * Accessibility was at the forefront of design and development. Using a contrasting colour palette ensures the site is easily accessible to users regardless of abilities, making the experience more enjoyable for all.
 
 ### User Stories
@@ -36,7 +36,7 @@ The goal of Woof and Bean is to provide a functional e-commerce experience to si
 * Sort by specific category of Product
 * Search for a product by title or specific words in product details
 * Easily see what I've searched for and the number of results found
-* Be shown on a products details page whether a particular product is on my wishlist
+* Be shown on a product details page whether a particular product is on my wishlist or not
 #### Purchasing and Checkout
 * Easily select the quantity of a product when purchasing it
 * View items in my bag to be purchased
@@ -69,8 +69,14 @@ The colour scheme of Woof and Bean is primarily comprised of Onyx, White, and Pe
 * I adjusted the Stripe element font to use "Poppins" to bring it in line and consistent with the rest of the website typography.
 
 ![Image of Body Font and Title Font](docs/images/poppins-font.jpg)
-* I chose the "Poppin" font for both the header and body of the site to keep a consistent and legible font throughout. Utilising Uppercase and bold font weights to highlight headers and important information for the user.
+* I chose the "Poppin" font for both the header and body of the site to keep a consistent and legible font throughout. Utilising Uppercase and bold font weights to highlight headers and important information for the user to pay attention to.
 
+### Icons and Images
+
+* All icons used throughout the site were provided by [FontAwesome](https://fontawesome.com/) as their style is aesthetically pleasing while being consistent and easily understandable
+* I sourced an icon from [Flaticon](https://www.flaticon.com) that will be attributed in the credits section of this document. I then used [Favicon](https://favicon.io/) to convert this png to an icon file and imported that to my site. I installed a Favicon to help users distinguish this tab from others in their browser, the simple book-related design and bright colours help to do this.
+* All product images will be attributed in the credits section, along with the hero image on the home page.
+* The home page image serves to provide an aesthetically pleasing and colourful element to the page while making clear that this site is a bookshop.
 
 
 bug - NoReverseMatch at /profile/whishlist/ when trying to include html for mobile wishlist view
