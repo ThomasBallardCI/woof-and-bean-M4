@@ -8,7 +8,7 @@ body {
     background-color: #3C3C3C;
     height: calc(100vh - 164px);
     color: #555;
-    font-family: 'Poppins';
+    font-family: 'Poppins', sans-serif !important;
 }
 
 /* from Bulma */

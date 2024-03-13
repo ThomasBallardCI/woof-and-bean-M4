@@ -14,7 +14,7 @@ var elements = stripe.elements();
 var style = {
     base: {
         color: '#3C3C3C',
-        fontFamily: '"Poppins", Poppins, sans-serif',
+        fontFamily: '"Poppins", sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',
         '::placeholder': {

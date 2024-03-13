@@ -1,4 +1,79 @@
-bug - NoReverseMatch at /profile/whislist/ when trying to include html for mobile wishlist view
+# [View The Live Project Here](https://woof-and-bean-ci-m4-3f6e86d7432d.herokuapp.com/)
+
+## Woof and Bean
+
+Woof and Bean is a coffee and dog lovers' e-commerce website. Users can purchase various coffee-related paraphernalia and the perfect toy or treat for their special canine friend all in one place. By browsing via specific categories and using sorting filters such as name, date added, and category, as well as searching for keywords, the user has the ability to quickly find exactly what they are looking for. The basic functionality of the site comprises of the user being able to register for a private account, log in and out, and create orders by paying via Stripe and receiving confirmation emails when the order is created. Additional functionality has been added to the user experience, and these details will be discussed further in this document.
+
+!["Am I Responsive" image](docs/images/amiresponsive.jpg)
+
+## User Experience (UX)
+### Project Goals
+
+The goal of Woof and Bean is to provide a functional e-commerce experience to simulate the ability for users to browse products, add them to the cart, check out, receive order confirmation emails, and have a record of past orders within their account.
+
+* When developing Woof and Bean, the main goal was to improve upon the basic functionality as outlined above in this document and enhance the user experience further. The additional functionality is as follows:
+    * Users have the ability to easily create and edit a private wishlist while still being able to add the products directly to their shopping cart from the wishlist itself.
+    * A contact form for the user to be able to contact the site admins with queries, issues, or suggestions, then receive an email confirmation that their message was successfully sent.
+* Accessibility was at the forefront of design and development. Using a contrasting colour palette ensures the site is easily accessible to users regardless of abilities, making the experience more enjoyable for all.
+
+### User Stories
+#### Viewing and Navigation
+* View the website on a range of device sizes and have it be aesthetically pleasing and functional.
+* View a range of coffee and dog products for sale.
+* View individual product details.
+* Easily view the total of my purchases at any time.
+* View what products (if any) are on my wishlist
+* View past order details on my profile
+#### Registration and User Accounts
+* Easily register for an account
+* Easily log in or log out
+* Easily recover my password in case I forget it
+* Receive an email confirmation after registering
+* Have a personalised user profile
+* Be able to easily contact the site owners and receive confirmation of my message
+#### Sorting and Setting
+* Sort the list of available Products
+* Sort by specific category of Product
+* Search for a product by title or specific words in product details
+* Easily see what I've searched for and the number of results found
+* Be shown on a products details page whether a particular product is on my wishlist
+#### Purchasing and Checkout
+* Easily select the quantity of a product when purchasing it
+* View items in my bag to be purchased
+* Adjust the number of individual items in my bag
+* Easily enter my payment information
+* Feel my personal and payment information is safe and secure
+* View an order confirmation after checkout
+* Receive an email confirmation after checking out
+#### Admin and Store Management
+* Add products
+* Edit/update products
+* Delete products
+
+## Design
+### Colour Scheme
+
+![Image of colour scheme](docs/images/woofandbeancolorpalette.jpg)
+
+The colour scheme of Woof and Bean is primarily comprised of Onyx, White, and Peach.
+
+* The background is Onyx to ensure the site is not bright and harsh on the eyes of the user when browsing products.
+* The site text is predominately White and Peach, to ensure readability but also to provide enough contrast with the Onyx background matching the brand logo colours.
+* The Choice of colours chosen along with eye strain and readability in mind matches that of the company logo invoking a premium or luxury feeling.
+
+### Typography
+
+[Google Fonts](https://fonts.google.com/) Was used to import the font featured on the site. The Font used is of the type sans-serif for consistency.
+
+![Image of Stripe Element Font](docs/images/poppins-font.jpg)
+* I adjusted the Stripe element font to use "Poppins" to bring it in line and consistent with the rest of the website typography.
+
+![Image of Body Font and Title Font](docs/images/poppins-font.jpg)
+* I chose the "Poppin" font for both the header and body of the site to keep a consistent and legible font throughout. Utilising Uppercase and bold font weights to highlight headers and important information for the user.
+
+
+
+bug - NoReverseMatch at /profile/whishlist/ when trying to include html for mobile wishlist view
         fix = putting mobile includes inside forloop for wishlist items
 
 bug - after refactoring shopping basket code for mobile devices increment and decrement buttons would allow users to decrement and increment bellow 1 and above 99
