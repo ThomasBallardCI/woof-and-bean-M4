@@ -114,7 +114,7 @@ Woof and Bean is comprised of 11 core sections: Home page, Signup, Login, Profil
 | The checkout success, or thank you page is reached after an order has been processed and displays the order information | The page confirms that the order has gone through successfully and tells the user which email their confirmation will be sent to. An example of this confirmation email is shown in the images section of this table, and upon deployment this will send the confirmation email to the user's real email address | ![Order confirmation email](/docs/images/order-confirmation-email.jpg) |
 | | The order success page confirms the following details: order number, order date, the item(s) ordered along with the quantity, the full delivery details provided, and the full billing information. Below this is a button encouraging users to 'Continue Shopping' which would redirect them to the all products page| ![Order confirmation](/docs/images/order-confirmation.jpg) |
 | The Contact form can be accessed whether a user is logged in or not, and simply asks users to fill in the following information: their name, email, subject line, and message, a button is shown below to allow users to submit their message | All fields in this form are required and the form cannot be submitted without all being filled in correctly | ![Contact Form](/docs/images/contact-form.jpg) |
-| | The contact form is set up to send a confirmation email to the user with their message subject, and content repeated back to them so they have a copy of the communication. The email also states that Woof and Bean will respond within 48 hours, but if the message is urgent a contact number is listed | ![Contact form confirmation](/docs/images/contact-confirmation.png) |
+| | The contact form is set up to send a confirmation email to the user with their message subject, and content repeated back to them so they have a copy of the communication. The email also states that Woof and Bean will respond within 48 hours, but if the message is urgent a contact number is listed | ![Contact form confirmation](/docs/images/contact-confirmation.jpg) |
 
 * Future Implementations:
   * Ideally, I would like to implement a stock count feature for site managers and admin to be notified by email when the stock of an item is getting low.
@@ -123,17 +123,20 @@ Woof and Bean is comprised of 11 core sections: Home page, Signup, Login, Profil
   * I also would like to add a rating functionality to the products and give the users the ability to rate products they have previously purchased so the product rating can be shown to new and existing customers.
 
 ### Accessibility
+
 * Throughout the development of this site accessibility was a priority, semantic HTML, alt tags, and aria-labels are used wherever possible to assist screen readers. The font chosen is I believe, legible regardless of the screen size the user is on.
+
 * Lighthouse gave my site a score in the 90's this demonstrates that I have prioritised accessibility throughout development and have implemented accessible features where needed whilst not compromising on the company brand and colour scheme.
-![Lighthouse Accessibility Score](/docs/images/accessibility.jpg) 
+    
+    ![Lighthouse Accessibility Score](/docs/images/accessibility.jpg)
 
 ### Wireframes
 During development I utilised the boutique ado walkthrough layout as a template and adjusted the styling to fit my needs. The two custom models (Contact and Wishlist) I wireframed out in a style to fit the rest of the site seamlessly.
 
-*[Contact Desktop](/docs/images/contact-desktop.jpg)
-*[Contact Mobile](/docs/images/contact-mobile.jpg)
-*[Wishlist Desktop](/docs/images/wishlist-desktop.jpg)
-*[Wishlist Mobile](/docs/image/wishlist-mobile.jpg)
+* [Contact Desktop](/docs/images/contact-desktop.jpg)
+* [Contact Mobile](/docs/images/contact-mobile.jpg)
+* [Wishlist Desktop](/docs/images/wishlist-desktop.jpg)
+* [Wishlist Mobile](/docs/image/wishlist-mobile.jpg)
 
 ### Languages Used
 Woof and Bean used HTML, CSS, Python, and Javascrip
@@ -158,6 +161,165 @@ Woof and Bean used HTML, CSS, Python, and Javascrip
 * [AmIResponsive!](https://ui.dev/amiresponsive) Aided in the creation of a multi-device mockup image so that I could test the appearance of the site on multiple device sizes, and provided the image seen at the beginning of this document.
 * [W3C Markup Validator](https://validator.w3.org/) to validate HTML
 * [Jigsaw W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) to validate CSS used
+
+### Deployment
+Woof and Bean is deployed using Heroku by the following steps:
+
+Elephant SQL:
+-
+    1. Go to [ElephantSQL](https://www.elephantsql.com/) and either create an account or log in via GitHub
+    2. Click the 'Create New Instance' button
+    3. Choose your plan (The Tiny Turtle free plan is acceptable), name your instance and leave the tags blank if you wish, then click the 'Select Region' button
+    4. Select a data centre that is closest to you
+    5. Click the 'Review' button
+    6. Double check your details then click the 'Create Instance' button
+    7. Navigate to the ElephantSQL dashboard and click on the database instance name you provided for this project
+    8. In the URL section copy the database URL to your clipboard
+    9. We will shortly return to this tab so leave it open
+
+Heroku:
+-
+    1. Log into Heroku and click the 'New' button, then the 'Create a new app' button
+    2. Enter a name for your app (this must be unique), choose the region that is closest to you and click the 'Create app' button
+    3. Click 'Reveal Config Vars'
+    4. Navigate back to your ElephantSQL tab and ensure the database URL is copied to your clipboard
+    5. On Heroku add a config var named 'DATABASE_URL' and paste your ElephantSQL database URL as the accompanying value, then click 'Add'
+    6. Add all other necessary environment variables to this config var section from your project's .env file apart from the DEVELOPMENT variable
+    7. Find the 'Deploy' tab for your app on Heroku and click it
+    8. In the Deployment method section click 'Connect to GitHub', type your repo name and click 'Connect'
+    9. Click 'Enable Automatic Deploys' to ensure that your GitHub repository and Heroku are synced if you make any further code or project changes
+    10. Click 'Deploy Branch' to let Heroku begin building the site
+    11. We must now initialise our empty database by clicking 'More' then 'Run console'
+    12. In the terminal that has appeared type 'from woof-and-bean import db' and click enter
+    13. Now type 'db.create_all()' and hit enter again
+    14. Type 'exit()' to exit the Python terminal and close the console, our Heroku database will now contain the tables and columns created from our models.py files
+    15. Click the 'Open app' button to visit your built site
+
+
+AWS (Amazon Web Services):
+-
+    1. Navigate to [AWS](https://aws.amazon.com/), log in or create an account if you don't already have one
+    2. Search for S3 in Services, and click the 'Create bucket' button
+    3. Enter a bucket name (this should relate to your Heroku app name), and select the region closest to you
+    4. Uncheck 'Block all public access' and acknowledge that the bucket will be public, click 'ACLs enabled' and 'Bucket owner preferred', click 'Create bucket'
+    5. Click the bucket instance you just created and navigate to the Properties tab
+    5. Scroll down to 'static website hosting' and click 'use this bucket to host a website'
+    6. Enter default values of index.HTML for the Index document, and error.HTML for the Error document then click 'Save'
+    7. On the Permissions tab paste the following code into the CORS configuration editor: 
+    [
+    {
+        "AllowedHeaders": [
+            "Authorization"
+        ],
+        "AllowedMethods": [
+            "GET"
+        ],
+        "AllowedOrigins": [
+            "*"
+        ],
+        "ExposeHeaders": []
+    }
+    ]
+    8. Click 'Save'
+    9. Navigate to 'Bucket Policy' and select 'policy generator', the type of which is 'S3 Bucket Policy', type * into the Principal field, and select 'get object' for the action
+    10. Copy your ARN from the Bucket Policy tab and paste this into the ARN field on the policy generator page, then click 'Add Statement', then 'Generate Policy'
+    11. Copy the code displayed to your clipboard and paste this into the Bucket Policy editor. Before saving add a '/*' to the end of the Resource key, then click 'Save'
+    12. Navigate to the 'Access Control List' tab, click 'edit' and enable List for Everyone (public access) and accept the warning box
+    13. From the AWS site search for 'IAM', click 'User Groups' and then click 'Create New Group'
+    14. Name this group something that makes sense for the logic of your project, I named this 'manage-woof-and-bean', then click 'Create Group'
+    15. From the IAM dashboard click 'Policies' then 'Create Policy'
+    16. Click the 'JSON' tab and select 'import policy', search for 'S3' and import the 'AmazonS3FullAccess' policy
+    17. Find your arn from the Bucket Policy page in S3 and copy it, paste this into the 'Resource' key in the JSON tab instead of the '*' value. The format should be
+    "Resource": [
+        'your_arn_here',
+        'your_arn_here/*'
+    ]
+    18. Click 'Review Policy', and give it a name and description, e.g name: woof-and-bean-policy, description: Access to S3 bucket for woof and bean static files
+    19. Click 'Create Policy'
+    20. Navigate back to the 'User Groups' page and click on the group you created
+    21. Click 'Attach Policy', search for the policy you just created and select it, then click 'Attach Policy'
+    22. Finally navigate to the 'Users' page and click 'Add User'
+    23. Create a user named 'your-site-name-staticfiles-user', my username was 'woof-and-bean-staticfiles-user', click 'Next' then select the group we created earlier and click 'Next' again and 'Create User' to add your user to this group
+    24. In the Identity and Access Management tab click on Users, and click on the username of the user you just created
+    25. Click the 'security credentials' tab, scroll down to 'access keys' and click 'create access key'
+    26. On the 'Access key best practices & alternatives' page click 'Other' as our use case, follow this process to the end and click the 'download .csv' button
+    27. Save this .csv file as they are only available to us once and will be used to authenticate our user from our Django app
+
+Back in the Gitpod CLI:
+-
+    1. Type 'pip3 install boto3' into the terminal
+    2. Type 'pip3 install django-storages' into the terminal
+    3. Type 'pip3 freeze > requirements.txt' into the terminal to update this file
+    4. In settings.py add 'storages', to our installed apps
+    5. Still in settings.py add the following code:
+    if 'USE_AWS' in os.environ:
+    AWS_STORAGE_BUCKET_NAME = 'your_aws_bucket_name_here'
+    AWS_S3_REGION_NAME = 'your_aws_region_name_here'
+    AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')    AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+    AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
+
+    STATICFILES_STORAGE = 'custom_storages.StaticStorage'
+    STATICFILES_LOCATION = 'static'
+    DEFAULT_FILE_STORAGE = 'custom_storages.MediaStorage'
+    MEDIAFILES_LOCATION = 'media'
+
+    STATIC_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{STATICFILES_LOCATION}/'
+    MEDIA_URL = f'https://{AWS_S3_CUSTOM_DOMAIN}/{MEDIAFILES_LOCATION}/'
+    6. Navigate to Heroku and add these AWS keys to our config variables, the AWS_ACCESS_KEY_ID, and AWS_SECRET_ACCESS_KEY can be found in the .csv file we downloaded and saved earlier
+    7. Add the key 'USE_AWS' with the value 'True' (without quotation marks) to our Heroku config vars
+    8. Back in our workspace create a base-level file called 'custom_storages.py' and add the following code:
+    from django.conf import settings
+    from storages.backends.s3boto3 import S3Boto3Storage
+
+    class StaticStorage(S3Boto3Storage):
+        location = settings.STATICFILES_LOCATION
+    class MediaStorage(S3Boto3Storage):
+        location = settings.MEDIAFILES_LOCATION
+    9. Add, commit and push your changes using the syntax 'git add .', 'git commit -m "add a message here", 'git push'
+
+Back on AWS:
+-
+    1. Navigating to our bucket we can now see a static folder in our bucket containing all of our static files
+    2. In S3 click 'Create folder' and name this folder 'media', click 'Save'
+    3. Click the just created 'media' folder, then click 'upload', 'Add files' and select all the product and site images for the website
+    4. Click 'Next' and under 'manage public permissions' select 'grant public read access to this object(s)', click 'Next' again and click 'Upload'
+
+In Django admin:
+-
+    1. Login to your superuser account on the Django admin
+    2. Click 'email addresses' and set your superuser's email address to verified and primary
+
+Stripe:
+-
+    1. Login to your Stripe account, click 'Developers' and 'API keys' and locate your publishable key and secret key
+    2. Check these keys and values are added to your Heroku config vars, if not add them now
+    3. Create a new webhook endpoint by going to Webhooks in the Developers menu, click 'Add endpoint' and paste your deployed url here but add '/checkout/wh/' to the end of the url, click to receive all events then click 'Add endpoint'
+    4. Click to reveal your Signing secret and add this value to your Heroku config vars
+    5. Ensure all the variables in Heroku config vars match the names you've provided in your settings.py file
+
+Your deployed site should now appear and function the same way as your development site with all static and media files loading and displaying appropriately
+
+
+How to Fork Woof and Bean:
+-
+    1. Login to your GitHub account
+    2. Navigate to the 'woof-and-bean-m4' repository and click the 'Fork' button in the top right corner
+
+How to Clone Woof and Bean:
+-
+    1. Login to your GitHub account
+    2. Navigate to the 'woof-and-bean-m4' repository
+    3. Click the green 'Code' button next to the 'Gitpod' button
+    4. Click 'Open with GitHub desktop'
+    5. Click the 'Choose...' button and navigate to a local path where you wish to store the cloned repository
+    6. Click the 'Clone' button
+
+## Testing
+### Automated Testing
+
+
+
+
 
 
 
