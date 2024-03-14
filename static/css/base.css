@@ -9,6 +9,7 @@ body {
     height: calc(100vh - 164px);
     color: #555;
     font-family: 'Poppins', sans-serif !important;
+    display: grid;
 }
 
 /* Footer */
@@ -407,7 +408,6 @@ a.category-badge>span.badge:hover {
 
 .already-in-wishlist {
     pointer-events: none;
-    /* Disable pointer events */
 }
 
 .img-thumbnail {
@@ -504,11 +504,18 @@ a.category-badge>span.badge:hover {
     }
 
     ul {
-        padding-right: .6rem;
+        padding-right: 0.6rem;
         padding-left: 0rem;
         margin-top: 0.6rem;
         margin-bottom: 0.6rem;
     }
+
+    #user-options,
+    #bag-options,
+    #mobile-search {
+        font-size: .75rem;
+    }
+
 }
 
 /* -------------------------------- Media Queries for Contact Form

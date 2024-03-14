@@ -107,7 +107,8 @@ Home
             </div>
             {% else %}
             <p class="lead mb-5 text-peach">Your bag is empty.</p>
-            <a href="{% url 'products' %}" class="btn btn-outline-black text-peach rounded-pill btn-lg">
+            <a href="{% url 'products' %}?category=dog_toys,dog_treats,coffee_beans,coffee_pre_ground,coffee_accessories"
+                class="btn btn-outline-black text-peach rounded-pill btn-lg">
                 <span class="icon">
                     <i class="fas fa-chevron-left"></i>
                 </span>
