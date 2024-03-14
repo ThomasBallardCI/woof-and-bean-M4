@@ -317,6 +317,12 @@ How to Clone Woof and Bean:
 ## Testing
 ### Automated Testing
 
+### W3 Nu HTML Validator
+The W3 Nu HTML Validator was used multiple times throughout development to ensure the HTML used was all up to industry standards, the results are as follows:
+
+* [Home page](/docs/images/home-html.jpg)
+* [Sign Up page](/docs/images/signup-html.jpg)
+* [Log In page](/docs/images/login-html.jpg)
 
 
 
