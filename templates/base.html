@@ -161,6 +161,36 @@
     {% block content %}
     {% endblock %}
 
+    {% block footer %}
+    <!-- Footer -->
+        <footer class="page-footer small">
+            <div class="row container-fluid">
+                <!-- Copyright -->
+                <div class="col footer-copyright text-left py-3 text-white">
+                    © 2024 Copyright:
+                    <a class="text-peach" href="https://github.com/ThomasBallardCI" target="_blank"> 
+                        Thomas Ballard
+                    </a>
+                </div>
+                <!-- Copyright -->
+                <div class="col text-right py-3">
+                    <!-- Facebook -->
+                    <a class="fb-ic" href="https://facebook.com" target="_blank">
+                        <i class="fab fa-facebook-f fa-lg mr-md-5 mr-3 fa-2x text-peach"> </i>
+                    </a>
+                    <!-- Twitter -->
+                    <a class="tw-ic" href="https://twitter.com" target="_blank">
+                        <i class="fab fa-twitter fa-lg mr-md-5 mr-3 fa-2x text-peach"> </i>
+                    </a>
+                    <!--Instagram-->
+                    <a class="ins-ic" href="https://instagram.com" target="_blank">
+                        <i class="fab fa-instagram fa-lg mr-md-5 mr-3 fa-2x text-peach"> </i>
+                    </a>
+                </div>
+            </div>
+        </footer>
+    {% endblock %}
+
     {% block postloadjs %}
     <script type="text/javascript">
         $('.toast').toast('show');
