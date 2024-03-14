@@ -53,7 +53,8 @@
 </head>
 
 <body>
-    <header class="containder-fluid fixed-top">
+    <div id="flex-container">
+    <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-custom pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link logo-link">
@@ -166,14 +167,14 @@
         <footer class="page-footer small">
             <div class="row container-fluid">
                 <!-- Copyright -->
-                <div class="col footer-copyright text-left py-3 text-white">
+                <div class="col footer-copyright text-left small py-3 ml-md-5 ml-3 text-white">
                     © 2024 Copyright:
                     <a class="text-peach" href="https://github.com/ThomasBallardCI" target="_blank"> 
                         Thomas Ballard
                     </a>
                 </div>
                 <!-- Copyright -->
-                <div class="col text-right py-3">
+                <div class="col text-right py-3 small">
                     <!-- Facebook -->
                     <a class="fb-ic" href="https://facebook.com" target="_blank">
                         <i class="fab fa-facebook-f fa-lg mr-md-5 mr-3 fa-2x text-peach"> </i>
@@ -189,7 +190,8 @@
                 </div>
             </div>
         </footer>
-    {% endblock %}
+    </div>
+    {% endblock %}    
 
     {% block postloadjs %}
     <script type="text/javascript">
