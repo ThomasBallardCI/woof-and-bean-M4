@@ -23,30 +23,32 @@ def contact_us(request):
             contact = form.save()
             customer_email = email
             email_subject = render_to_string(
-                "contact/contact_confirmation_emails/" + "contact-email-subject.txt",
+                "contact/contact_confirmation_emails/" +
+                "contact-email-subject.txt",
                 {"contact": contact},
             )
             email_body = render_to_string(
                 "contact/contact_confirmation_emails/contact-email-body.txt",
-                {"contact": contact, "contact_email": settings.DEFAULT_FROM_EMAIL},
+                {"contact": contact,
+                    "contact_email": settings.DEFAULT_FROM_EMAIL},
             )
 
             send_mail(
-                email_subject, email_body, settings.DEFAULT_FROM_EMAIL, [customer_email]
+                email_subject,
+                email_body,
+                settings.DEFAULT_FROM_EMAIL,
+                [customer_email]
             )
             messages.success(
                 request,
                 "Thank you for sending us a message \
-            we aim to respond within 48 hours",
+                we aim to respond within 48 hours",
             )
             return redirect(reverse("home"))
         else:
-            messages.error(
-                request,
-                "Your message couldn't be sent, please \
+            messages.error(request, "Your message couldn't be sent, please \
             check all information in the form is provided, and correct then \
-            try again. Thank you",
-            )
+            try again. Thank you",)
     else:
         form = ContactForm()
     return render(request, "contact/contact.html", {"form": form})

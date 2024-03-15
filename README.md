@@ -323,9 +323,66 @@ The W3 Nu HTML Validator was used multiple times throughout development to ensur
 * [Home page](/docs/images/home-html.jpg)
 * [Sign Up page](/docs/images/signup-html.jpg)
 * [Log In page](/docs/images/login-html.jpg)
+* [Product Management page](/docs/images/product-management-html.jpg)
+* [Wishlist page](/docs/images/wishlist-html.jpg)
+* [Profile page](/docs/images/profile-html.jpg)
+* [Contact Us page](/docs/images/contact-html.jpg)
+* [All Products page](/docs/images/all-products-html.jpg)
+* [Product Detail page](/docs/images/product-detail-html.jpg)
+* [Shopping Bag page](/docs/images/shopping-bag-html.jpg)
+* [Checkout page](/docs/images/checkout-html.jpg)
+* [Checkout Success page](/docs/images/checkout-success-html.jpg)
+
+### W3C CSS Validation Service
+The W3C CSS Validation Service was used to validate the two CSS files contained within the project, the results are as follows:
+
+* [Base.css](/docs/images/base-css-validation.jpg)
+* [Profile.css](/docs/images/profile-css-validation.jpg)
+
+### JS Hint
+JS Hint was used to validate the JavaScript found throughout the project with the results being:
+
+* [Profile](/docs/images/profile-js-hint.jpg)
+* [Stripe](/docs/images/stripe-js-hint.jpg)
+* [Quantity Input Calculator](/docs/images/quantity-input-script-js-hint.jpg)
+
+### Python Linter
+
+The following files were tested with a [Python Linter](https://pep8ci.herokuapp.com/) to ensure PEP8 compliance, and all files apart from settings.py passed with no errors.
+
+* [Bag contexts.py](/docs/images/bag-contexts.jpg)
+* [Bag urls.py](/docs/images/bag-urls.jpg)
+* [Bag views.py](/docs/images/bag-views.jpg)
+* [Checkout admin.py](/docs/images/checkout-admin.jpg)
+* [Checkout forms.py](/docs/images/checkout-forms.jpg)
+* [Checkout models.py](/docs/images/checkout-models.jpg)
+* [Checkout signals.py](/docs/images/checkout-signals.jpg)
+* [Checkout urls.py](/docs/images/checkout-urls.jpg)
+* [Checkout views.py](/docs/images/checkout-views.jpg)
+* [Webhook-handler.py](/docs/images/webhook-handler.jpg)
+* [Webhooks.py](/docs/images/webhooks.jpg)
+* [Contact admin.py](/docs/images/contact-admin.jpg)
+* [Contact forms.py](/docs/images/contact-forms.jpg)
+* [Contact models.py](/docs/images/contact-models.jpg)
+* [Contact urls.py](/docs/images/contact-urls.jpg)
+* [Contact views.py](/docs/images/contact-views.jpg)
+* [Home urls.py](/docs/images/home-urls.jpg)
+* [Home views.py](/docs/images/home-views.jpg)
+* [Products admin.py](/docs/images/products-admin.jpg)
+* [Products forms.py](/docs/images/products-forms.jpg)
+* [Products models.py](/docs/images/products-models.jpg)
+* [Products urls.py](/docs/images/products-urls.jpg)
+* [Products views.py](/docs/images/products-views.jpg)
+* [Products widgets.py](/docs/images/products-widgets.jpg)
+* [Profile forms.py](/docs/images/profile-forms.png)
+* [Profile urls.py](/docs/images/profile-urls.png)
+* [Profile models.py](/docs/images/profiles-models.png)
+* [Profile views.py](/docs/images/profiles-views.png)
 
 
 
+* [Bookshop urls.py](/docs/images/bookshop-urls.png)
+* [Bookshop settings.py](/docs/images/settings.png)
 
 
 
