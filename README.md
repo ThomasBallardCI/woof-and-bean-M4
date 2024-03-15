@@ -59,7 +59,7 @@ The colour scheme of Woof and Bean is primarily comprised of Onyx, White, and Pe
 
 * The background is Onyx to ensure the site is not bright and harsh on the eyes of the user when browsing products.
 * The site text is predominately White and Peach, to ensure readability but also to provide enough contrast with the Onyx background matching the brand logo colours.
-* The Choice of colours chosen along with eye strain and readability in mind matches that of the company logo invoking a premium or luxury feeling.
+* The Choice of colours along with eye strain and readability in mind matches that of the company logo invoking a premium or luxury feeling.
 
 ### Typography
 
@@ -103,7 +103,7 @@ Woof and Bean is comprised of 11 core sections: Home page, Signup, Login, Profil
 | | The Profile page displays a user's order history with information including their order number, date and time of purchase, the items and quantities ordered, and their order total. When the order number is clicked it brings users to their order confirmation which is initially displayed after a purchase made been made | ![Order History](/docs/images/order-history.jpg) |
 | The Wishlist page allows users to view, remove, and add to basket products in their wishlist, though only if they are logged in | If a user has no items on their wishlist they are met with a message. 'Your wishlist is empty to add products visit a product page and click "add to wishlist"' | ![No products in wishlist view](/docs/images/wishlist-empty.jpg)|
 | | When a user has added an item to their wishlist they can view this product in their Wishlist page, here the product image, name, price, date added, and two actions an add to bag button that add's the product to the users bag and a remove button that removes the product from the users wishlist. | ![Wishlist with products](/docs/images/wishlist.jpg) |
-| The Products view shows all products available for sale, it allows users to browse all available products, filter them by category, and to sort by price, rating, alphabetised name, and alphabetised category. | Clicking any of the category buttons takes the user to a page that only displays products that match their request. The 'sort by...' box allows users to sort from low to high on price and rating. | ![All Products view](/docs/images/all-products.jpg) |
+| The Products view shows all products available for sale, it allows users to browse all available products, filter them by category, and to sort by price, alphabetised name, and alphabetised category. | Clicking any of the category buttons takes the user to a page that only displays products that match their request. The 'sort by...' box allows users to sort from low to high on price | ![All Products view](/docs/images/all-products.jpg) |
 | | The product pages (whether All products or a filtered category page) displays the products in cards with the product image, title, price, and the category tag. For site managers like the superuser, there are also edit and delete buttons for product stock control. Due to the amount of products displayed on each page there is a back-to-top button to allow users to quickly and easily return to the top of the page | ![All Products Cards](/docs/images/all-products-card.jpg) |
 | The Products Detail page is accessed when a user clicks on the title or image of a product on the All Products (or any product category) page. Each product detail page shows information about that product exclusively, along with letting users add it to their wishlist, choose a quantity, and add it to their bag. | This page displays the Products image, title, price, category tags, and description. If a user adds a product to their bag a message pops up confirming that this item has been added, and the bag icon in the navbar updates based on the price. | ![Product details page](/docs/images/product-details.jpg) |
 | | The 'add to wishlist' button is featured above the product details below the category tag and when clicked adds the product to the user's Wishlist page. If a product is in a user's wishlist this button changes its text to say 'Already in wishlist' to let users know the product is already in their wishlist | ![remove from wishlist](/docs/images/already-in-wishlist.jpg) |
@@ -131,15 +131,15 @@ Woof and Bean is comprised of 11 core sections: Home page, Signup, Login, Profil
     ![Lighthouse Accessibility Score](/docs/images/accessibility.jpg)
 
 ### Wireframes
-During development I utilised the boutique ado walkthrough layout as a template and adjusted the styling to fit my needs. The two custom models (Contact and Wishlist) I wireframed out in a style to fit the rest of the site seamlessly.
+During development, I utilised the boutique ado walkthrough layout as a template and adjusted the styling to fit my needs. The two custom models (Contact and Wishlist) I wireframed out in a style to fit the rest of the site seamlessly.
 
 * [Contact Desktop](/docs/images/contact-desktop.jpg)
 * [Contact Mobile](/docs/images/contact-mobile.jpg)
 * [Wishlist Desktop](/docs/images/wishlist-desktop.jpg)
-* [Wishlist Mobile](/docs/image/wishlist-mobile.jpg)
+* [Wishlist Mobile](/docs/images/wishlist-mobile.jpg)
 
 ### Languages Used
-Woof and Bean used HTML, CSS, Python, and Javascrip
+Woof and Bean used HTML, CSS, Python, and Javascript
 
 ### Frameworks, Libraries, and Programs Used
 * [Adobe XD](https://helpx.adobe.com/uk/support/xd.HTML) was used to create the Wireframes seen above.
@@ -172,7 +172,7 @@ Elephant SQL:
     3. Choose your plan (The Tiny Turtle free plan is acceptable), name your instance and leave the tags blank if you wish, then click the 'Select Region' button
     4. Select a data centre that is closest to you
     5. Click the 'Review' button
-    6. Double check your details then click the 'Create Instance' button
+    6. Double-check your details then click the 'Create Instance' button
     7. Navigate to the ElephantSQL dashboard and click on the database instance name you provided for this project
     8. In the URL section copy the database URL to your clipboard
     9. We will shortly return to this tab so leave it open
@@ -180,13 +180,13 @@ Elephant SQL:
 Heroku:
 -
     1. Log into Heroku and click the 'New' button, then the 'Create a new app' button
-    2. Enter a name for your app (this must be unique), choose the region that is closest to you and click the 'Create app' button
+    2. Enter a name for your app (this must be unique), choose the region that is closest to you, and click the 'Create app' button
     3. Click 'Reveal Config Vars'
     4. Navigate back to your ElephantSQL tab and ensure the database URL is copied to your clipboard
     5. On Heroku add a config var named 'DATABASE_URL' and paste your ElephantSQL database URL as the accompanying value, then click 'Add'
     6. Add all other necessary environment variables to this config var section from your project's .env file apart from the DEVELOPMENT variable
     7. Find the 'Deploy' tab for your app on Heroku and click it
-    8. In the Deployment method section click 'Connect to GitHub', type your repo name and click 'Connect'
+    8. In the Deployment method section click 'Connect to GitHub', type your repo name, and click 'Connect'
     9. Click 'Enable Automatic Deploys' to ensure that your GitHub repository and Heroku are synced if you make any further code or project changes
     10. Click 'Deploy Branch' to let Heroku begin building the site
     11. We must now initialise our empty database by clicking 'More' then 'Run console'
@@ -225,10 +225,10 @@ AWS (Amazon Web Services):
     10. Copy your ARN from the Bucket Policy tab and paste this into the ARN field on the policy generator page, then click 'Add Statement', then 'Generate Policy'
     11. Copy the code displayed to your clipboard and paste this into the Bucket Policy editor. Before saving add a '/*' to the end of the Resource key, then click 'Save'
     12. Navigate to the 'Access Control List' tab, click 'edit' and enable List for Everyone (public access) and accept the warning box
-    13. From the AWS site search for 'IAM', click 'User Groups' and then click 'Create New Group'
+    13. From the AWS site search for 'IAM', click 'User Groups', and then click 'Create New Group'
     14. Name this group something that makes sense for the logic of your project, I named this 'manage-woof-and-bean', then click 'Create Group'
     15. From the IAM dashboard click 'Policies' then 'Create Policy'
-    16. Click the 'JSON' tab and select 'import policy', search for 'S3' and import the 'AmazonS3FullAccess' policy
+    16. Click the 'JSON' tab and select 'import policy', search for 'S3', and import the 'AmazonS3FullAccess' policy
     17. Find your arn from the Bucket Policy page in S3 and copy it, paste this into the 'Resource' key in the JSON tab instead of the '*' value. The format should be
     "Resource": [
         'your_arn_here',
@@ -242,7 +242,7 @@ AWS (Amazon Web Services):
     23. Create a user named 'your-site-name-staticfiles-user', my username was 'woof-and-bean-staticfiles-user', click 'Next' then select the group we created earlier and click 'Next' again and 'Create User' to add your user to this group
     24. In the Identity and Access Management tab click on Users, and click on the username of the user you just created
     25. Click the 'security credentials' tab, scroll down to 'access keys' and click 'create access key'
-    26. On the 'Access key best practices & alternatives' page click 'Other' as our use case, follow this process to the end and click the 'download .csv' button
+    26. On the 'Access key best practices & alternatives' page click 'Other' as our use case, follow this process to the end, and click the 'download .csv' button
     27. Save this .csv file as they are only available to us once and will be used to authenticate our user from our Django app
 
 Back in the Gitpod CLI:
@@ -275,7 +275,7 @@ Back in the Gitpod CLI:
         location = settings.STATICFILES_LOCATION
     class MediaStorage(S3Boto3Storage):
         location = settings.MEDIAFILES_LOCATION
-    9. Add, commit and push your changes using the syntax 'git add .', 'git commit -m "add a message here", 'git push'
+    9. Add, commit, and push your changes using the syntax 'git add .', 'git commit -m "add a message here", 'git push'
 
 Back on AWS:
 -
@@ -291,9 +291,9 @@ In Django admin:
 
 Stripe:
 -
-    1. Login to your Stripe account, click 'Developers' and 'API keys' and locate your publishable key and secret key
+    1. Login to your Stripe account, click 'Developers' and 'API keys', and locate your publishable key and secret key
     2. Check these keys and values are added to your Heroku config vars, if not add them now
-    3. Create a new webhook endpoint by going to Webhooks in the Developers menu, click 'Add endpoint' and paste your deployed url here but add '/checkout/wh/' to the end of the url, click to receive all events then click 'Add endpoint'
+    3. Create a new webhook endpoint by going to Webhooks in the Developers menu, click 'Add endpoint' and paste your deployed URL here but add '/checkout/wh/' to the end of the URL, click to receive all events then click 'Add endpoint'
     4. Click to reveal your Signing secret and add this value to your Heroku config vars
     5. Ensure all the variables in Heroku config vars match the names you've provided in your settings.py file
 
@@ -390,7 +390,7 @@ The only unresolved errors I got back were as follows:
 * Errors related to .vscode files these lines were not ones that I created or edited in any way.
 * The same as above goes for errors concerning the migrations files which comprised the majority of these linting warnings.
 * The checkout webhooks file is flagged for the variable 'e' being assigned but not used however this variable has been assigned to catch exceptions or errors in the code that may occur with webhooks and Stripe.
-* The contact views.py file warns that three variables 'name', 'subject', and 'content' are assigned but never used, these variables need to be assigned so that they can be accessed in the confirmation email sent to users
+* The contact views.py file warns that three variables 'name', 'subject', and 'content' are assigned but never used, these variables need to be assigned so that they can be accessed in the confirmation email sent to users.
 * Setting.py file is showing line length issues again these lines are generated by Django as explained above as well as flagging unused imports that as far as I'm aware are being used.
 * No other errors or warnings were documented and I feel confident that the project is up to industry standard for Python conventions.
 
@@ -404,7 +404,7 @@ The only unresolved errors I got back were as follows:
 | View a range of Products for sale | Yes. Over 30 products are availible currently to ensure a wide range of products that can be viewed and bought. |
 | View indiviual product details | Yes. Clicking into a product via the image or name will bring the user to a products detail page specific to that product. |
 | Easily view the total of purchases at any time | Yes. The Shopping bag icon in the navbar will automatically update whenever a user adds a product or edits a product quantity in their bag, A message will show a summary of the changes. |
-| View which products are in my wishlist | Yes. The wishlist is accessible from the navbar where users can view and manage their wishlist items, the button on a products details page to add a book to a users wishlist also changes to say 'Already in wishlist' when clicked to alert the user that this title is already in their wishlist. |
+| View which products are in my wishlist | Yes. The wishlist is accessible from the navbar where users can view and manage their wishlist items, the button on a products details page to add a product to a users wishlist also changes to say 'Already in wishlist' when clicked to alert the user that this title is already in their wishlist. |
 | Registration and User Accounts | |
 | Easily register for an account | Yes. The registration process is quick and simple and the user is sent a verification email to validate their account. |
 | Easily log in or logout | Yes. Users can log in quickly and easily, with radio button functionality that allows users to select if they want their login information to be stored for quicker login next time. |
@@ -419,7 +419,7 @@ The only unresolved errors I got back were as follows:
 | Easily see what I've searched for and the number of results | Yes. The search query is quoted back to the user above the results and this message shows how many products matched that specific criteria. |
 | Be shown on the product details page whether a particular product is in my wishlist | Yes. The 'add to wishlist' button changes to a 'already in wishlist' button when clicked to signify that it's been added/already in the user's wishlist. |
 | Purchasing and Checkout | |
-| Easily select the quantity of a product when purchasing it | Yes. There is a quantity selector box on the products details page that can be used to adjust the quantity of a book added to the bag. |
+| Easily select the quantity of a product when purchasing it | Yes. There is a quantity selector box on the products details page that can be used to adjust the quantity of a product added to the bag. |
 | View products in my bag to be purchased | Yes. Users can click the bag icon in the navbar to be taken to their shopping bag where a summary of their order is displayed. When an item is added to the bag a success message is shown to confirm this action and give an updated bag summary. |
 | Adjust the quantity of individual products in my bag | Yes. On the 'Shopping Bag' page there is a quantity selector to allow users to change and update the quantities of individual products in their order. |
 | Easily enter my payment information | Yes. Users can simply enter their delivery information which when logged in can be saved and auto-filled to expedite the process, then must enter their card number, expiry date, and CVC. |
@@ -433,12 +433,12 @@ The only unresolved errors I got back were as follows:
 
 ### Full Testing
 
-The Second Hand Shelf site has been continually tested throughout development, including both manual and automated testing as shown above in this document
+The Woof and Bean site has been continually tested throughout development, including both manual and automated testing as shown above in this document
 
 * General:
   * All navbar links direct the user to the correct page when clicked and items like Product Management do not appear unless the superuser is logged in.
-  * All links throughout the site were tested and all brought users to the correct page or initiate the expected action.
-  * For all actions taken on the page (i.e logging in, adding a product to your bag) will trigger a message in the top right corner confirming the action has been registered.
+  * All links throughout the site were tested and all brought users to the correct page or initiated the expected action.
+  * All actions taken on the page (i.e. logging in, adding a product to your bag) will trigger a message in the top right corner confirming the action has been registered.
   * When a term is entered into the search bar and the search button is clicked it will display the products that match this query in terms of the title, or description.
   * All social media links in the footer direct the user to a new page when clicked.
 * Home page:
@@ -449,30 +449,30 @@ The Second Hand Shelf site has been continually tested throughout development, i
   * The 'forgot password' link brings users to the correct page and they are sent an email with a link to reset their password.
   * The 'remember me' radio button when clicked means that the user's login information is saved for the next time they try to access their account.
   * When a user logs in they're redirected to the home page.
-* Sign up page:
+* Sign-up page:
   * The email address must be in email format using a '@' symbol to submit the form, the email address must be entered the same way twice for validation to occur.
   * The username must be unique and can only include letters, numbers, and the following symbols @, ., +, -, _, otherwise an error message will appear.
-  * The value of the password (again) field much match the value of the password field for the form to be submitted.
-  * When the form is submitted the user is sent an email to confirm and validate their account, when the link in this email is clicked the user is able to log in with their details.
+  * The value of the password (again) field must match the value of the password field for the form to be submitted.
+  * When the form is submitted the user is sent an email to confirm and validate their account, when the link in this email is clicked the user can log in with their details.
 * My Account dropdown:
   * When Product Management is clicked it brings the superuser to the add product form where all required fields must be filled in to submit the form. The 'edit' and 'delete' links on the all products and products detail pages direct to the correct pages/actions and can only be accessed or seen by the superuser.
   * Clicking 'add to wishlist' on the product detail page adds this product to the user's wishlist which can be viewed by clicking the 'My Wishlist' tab, this also updates the button to say 'already in wishlist'.
-  * When a user clicks "wishlist" it brings them to the wishlist page where they can view products in there wishlist, add them to bag, and remove them from the wishlist entirely.
-  * If a user clicks the 'My Profile' link, enters their default delivery information and clicks 'update information' this information is saved and will be used to autofill the checkout details form.
-  * Each time a user who is logged in places an order it will appear in the order history section of the My Profile page, all information shown here is correct and clicking the order number brings the user to the order confirmation page shown when checkout was finalised.
+  * When a user clicks "wishlist" it brings them to the wishlist page where they can view products in their wishlist, add them to the bag, and remove them from the wishlist entirely.
+  * If a user clicks the 'My Profile' link, enters their default delivery information, and clicks 'Update information' this information is saved and will be used to autofill the checkout details form.
+  * Each time a user who is logged in places an order it will appear in the order history section of the My Profile page, all information shown here is correct, and clicking the order number brings the user to the order confirmation page shown when checkout was finalised.
 * Contact Us page:
-  * The contact us page can be accessed regardless of whether a user is logged in, all fields are required and must be filled in to submit the form, the email address must be in a valid format or an error message will show.
+ * The Contact Us page can be accessed regardless of whether a user is logged in, all fields are required and must be filled in to submit the form, the email address must be in a valid format or an error message will show.
   * The content field has a maximum character limit of 2000 to allow users to submit a reasonably in-depth message to the site owners. Any characters above 2000 will not be registered by the field.
   * When the user clicks the 'send your message' button they are redirected to the home page with a success message appearing and an email being sent confirming their message has been received
 * All Products page: 
-  * Clicking all products in the navbar allows users to filter books based on price and category or to view all products. By clicking 'all products' users can choose to view different categories (also possible from the navbar dropdown). There's a 'sort by' dropdown where users can choose to sort from price high to low, price low to high and name or category alphabetically or in reverse.
+  * Clicking all products in the navbar allows users to filter products based on price and category or to view all products. By clicking 'all products' users can choose to view different categories (also possible from the navbar dropdown). There's a 'sort by' dropdown where users can choose to sort from price high to low, price low to high, and name or category alphabetically or in reverse.
   * The back-to-top button sits on the bottom right side of the screen and when clicked brings the user back to the top of the page.
 * Products detail page:
   * The product detail page features the 'add to wishlist' button which does as it suggests and changes to 'already in wishlist' when clicked.
   * The 'Add to bag' button adds an item in its quantity to the shopping bag and triggers a message confirming this action.  
 * Shopping Bag page:
-  * If the user has nothing in their shopping bag the page will be empty aside from a message that states 'Your bag is empty' with a button encouraging the user to keep shopping and takes them to the all products page.
-  * When a product is added to the shopping bag a success message detailing the bag contents is shown, clicking either 'Secure checkout' or the bag icon brings the user to the shopping bag page. Here a summary is shown and users can adjust the quantity of items, or remove them, clicking 'Secure checkout' here brings the user to the checkout page.
+  * If the user has nothing in their shopping bag the page will be empty aside from a message that states 'Your bag is empty' with a button encouraging the user to keep shopping and taking them to the all products page.
+  * When a product is added to the shopping bag a success message detailing the bag contents is shown, clicking either 'Secure checkout' or the bag icon brings the user to the shopping bag page. Here a summary is shown and users can adjust the quantity of products, or remove them, clicking 'Secure checkout' here brings the user to the checkout page.
 * Checkout page:
   * If users are logged in and have saved information via their profile the checkout details form will be pre-populated with this data, all required fields must be filled in in the correct format.
   * Ticking the 'save this delivery information to my profile' radio box updates the saved information stored in the user's profile.
@@ -482,20 +482,46 @@ The Second Hand Shelf site has been continually tested throughout development, i
   * The checkout success page displays a confirmation that the order has been processed along with an order summary featuring key information. 
   * An email is sent to users confirming their order has been successfully processed.
 
+### User Testing
+This site was tested by multiple individuals from the Ci London community on different devices to ascertain whether the site functions correctly for others. This also provided a very valuable opportunity for me to be made aware of any bugs that I hadn't noticed.
+* Devices used:
+    * iPhone 11
+    * iPhone 12
+    * Samsung Galaxy S20
+    * Desktop Windows PC via Chrome
+    * Apple Macbook
 
+# Bugs 
 
+| Bug | Has this been solved? | How? |
+| --- | --- | --- |
+| NoReverseMatch at /profile/wishlist/ | Yes | Wrapping the mobile device includes code blocks inside a for loop for wishlist items |
+| After code refactoring the shopping basket code for mobile devices the increment and decrement buttons would allow users to go below 1 and past 99 limits | Yes | Changed id's to classes for the quantity form and adjusted the JS to look for classes instead of id's. |
+| Server error 500 when signing up for account once deployed on Heroku | Yes | created a runtime.txt to force Heroku to use an older version of python. |
+| Stripe Webhooks failing | Yes | Added a missing "/" to the end of the Webhook name. |
+| After deployment main site logo was no longer loading | Yes | Adjusted the image source link for the AWS hosting of images. |
+| Samsung Mobile device when speed scrolling would show white in the bottom corners | Yes | Set background colour for the body to be the same as the "overlay" div used. |
+| iPhone 11 & iPhone 12 Users reported background/overlay colour not scrolling when moving through products | No | Applied the fix for the samsung scroll issue but due to not having and iPhone to retest this issue may still persist. |
 
-bug - NoReverseMatch at /profile/whishlist/ when trying to include html for mobile wishlist view
-        fix = putting mobile includes inside forloop for wishlist items
+## Credits
+### Code Sections/Tutorials
+* For help with the footer I used [Mathew James Taylor's](https://matthewjamestaylor.com/bottom-footer#problem) Bottom footer article and used a flexbox to accomplish this.
+* For my Contact model I used [ShonaDB](https://github.com/ShonaOB/terrariumsupplies/blob/main/communications/models.py) as a base and adapted it as I needed for this project.
+* Moving the pill shaped search icon inside the search bar I was helped by members of the Ci Slack London community.
+* I used [Very Academy](https://github.com/veryacademy/django-e-commerce-project/tree/main/Part-07%20Wish%20List) as inspiration for my wishlist functionality and adapted and customised it to fit my project.
 
-bug - after refactoring shopping basket code for mobile devices increment and decrement buttons would allow users to decrement and increment bellow 1 and above 99
-    Fix = Change Id's to classes for quantity form and adjusted JS to look for class elements.
+### Media
+* Home page image was generated by Microsoft Copilot Ai with a prompt from myself of "Woman in luxurious cafe with her spaniel dog".
+* Product images and descriptions where taken from and edited:
+    * [Pets At Home](https://www.petsathome.com/)
+    * [JR's Pet Products](https://www.jrpetproducts.com/)
+    * [Pets Corner](https://www.petscorner.co.uk/)
+    * [Selfridges](https://www.selfridges.com/GB/en/)
+    * [Beans Coffee Club](https://www.beanscoffeeclub.com/)
+* The icon used to create the Favicon for the site was sourced from [Flaticon](<a href="https://www.flaticon.com/free-icons/coffee" title="coffee icons">Coffee icons created by edt.im - Flaticon</a>) created by edt.im
 
-bug - Server error 500 when signing up for account - fix = create runtime.txt with older version of python for heroku to use
-
-bug - stripe webhooks failing. - Fix added missin / to the end of the webhook name
-
-Bug - logo image not loading after heroku deployment - fix: Adjusted image src link for AWS hosting
-src="https://woof-and-bean-ci-m4.s3.amazonaws.com/media/wblogo.png"
-
-Search bar icon inside input on the right helped by Slack London community
+## Acknowledgements
+* I'd like to acknowledge my Ci mentor Julia for her valuable input in planning this project.
+* I'd like to acknowledge all those who took the time to look at and test the site for me.
+* I'd like to acknowledge Skye and Ross from my college cohort group for there valuable insights and pointing me in the direction of useful litrature.
+* Finaly I need to acknowledge and thank the various members of the Code Institute student support tutors for all of the help they provided over the time of the course.
