@@ -12,7 +12,7 @@ Woof and Bean is a coffee and dog lovers' e-commerce website. Users can purchase
 The goal of Woof and Bean is to provide a functional e-commerce experience to simulate the ability for users to browse products, add them to the cart, check out, receive order confirmation emails, and have a record of past orders within their account.
 
 * When developing Woof and Bean, the main goal was to improve upon the basic functionality as outlined above in this document and enhance the user experience further. The additional functionality is as follows:
-Users can easily create and edit a private wishlist while still being able to add the products directly to their shopping cart from the wishlist itself.
+    * Users can easily create and edit a private wishlist while still being able to add the products directly to their shopping cart from the wishlist itself.
     * A contact form for the user to be able to contact the site admins with queries, issues, or suggestions, and then receive an email confirmation that their message was successfully sent.
 * Accessibility was at the forefront of design and development. Using a contrasting colour palette ensures the site is easily accessible to users regardless of abilities, making the experience more enjoyable for all.
 
