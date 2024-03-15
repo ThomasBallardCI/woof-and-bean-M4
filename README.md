@@ -383,8 +383,8 @@ The following files were tested with a [Python Linter](https://pep8ci.herokuapp.
 
 ### Flake8
 After using the CI Python linter to individually check the compliance of each Python page I used the command 'python3 -m flake8' in the terminal to further check for anything I may have missed. The results of this are below:
-* ![Flake8 1](/docs/images/flake8-1.jpg)
-* ![Flake8 2](/docs/images/flake8-2.jpg)
+![Flake8 1](/docs/images/flake8-1.jpg)
+![Flake8 2](/docs/images/flake8-2.jpg)
 
 The only unresolved errors I got back were as follows:
 * Errors related to .vscode and files as these lines were not ones that I created or edited in any way.
